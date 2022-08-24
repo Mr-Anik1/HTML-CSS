@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Form</title>
+  </head>
+  <body>
+    <h2>Contact Me:</h2>
+    <form action="https://httpbin.org/get" method="get">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <p>
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="Jane"
+            autocomplete="on"
+            autofocus
+            required
+          />
+        </p>
+        <p>
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Doe"
+            autocomplete="on"
+            required
+          />
+        </p>
+        <p>
+          <label for="phon">Phon:</label>
+          <input
+            type="tel"
+            name="phon"
+            id="phon"
+            placeholder="01785859567"
+            required
+          />
+        </p>
+        <p>
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Your Secret"
+            required
+          />
+        </p>
+        <p>
+          <label for="decade">Favourite Decade:</label>
+          <input
+            type="number"
+            name="decade"
+            id="decade"
+            min="1980"
+            max="2020"
+            step="10"
+            value="1990"
+          />
+        </p>
+        <!--Select Input-->
+        <p>
+          <label for="coffee">Favourite Coffee:</label>
+          <select name="coffee" id="coffee">
+            <option value="iced">Iced Coffee</option>
+            <option value="regular">Regular Coffee</option>
+            <option value="hot">Hot Coffee</option>
+            <option value="americano" selected>Americano</option>
+          </select>
+        </p>
+        <!--Radio Input-->
+        <fieldset>
+          <legend>What is your favourite food?</legend>
+          <p>
+            <input type="radio" name="food" id="rice" value="rice" />
+            <label for="rice">Rice</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="burger" value="burger" />
+            <label for="burger">Burger</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="bread" value="bread" />
+            <label for="bread">Bread</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="sweet" value="sweet" />
+            <label for="sweet">Sweet</label>
+          </p>
+        </fieldset>
+        <!--CheckBox-->
+        <fieldset>
+          <legend>Select Your Pets</legend>
+          <p>
+            <input type="checkbox" name="pets" id="dog" value="dog" />
+            <label for="dog">Dog</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="cat" value="cat" />
+            <label for="cat">Cat</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="horse" value="horse" />
+            <label for="horse">Horse</label>
+          </p>
+        </fieldset>
+        <!--Message-->
+        <fieldset>
+          <legend>Send Message</legend>
+          <p>
+            <label for="message">Your Message:</label>
+            <br />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </p>
+        </fieldset>
+        <!--Submit-->
+        <p>
+          <button type="submit">Submit</button>
+          <button
+            type="submit"
+            formaction="https://httpbin.org/post"
+            formmethod="post"
+          >
+            Post
+          </button>
+          <button type="reset">Reset</button>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>

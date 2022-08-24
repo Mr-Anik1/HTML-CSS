@@ -1,0 +1,22 @@
+a {
+  color: rgb(236, 10, 225);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(8, 94, 94);
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: rgb(231, 22, 22);
+}
+
+table,
+caption,
+tr,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 0.5em;
+}

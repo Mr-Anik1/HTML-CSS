@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="This page contains all things I am learning How to code in html this is very important"
+    />
+    <title>My Page</title>
+    <!--Link Section-->
+    <link rel="shortcut icon" href="img/html.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <h1>My goals for the year</h1>
+    <hr />
+    <!--NavBar-->
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#learn">Learning html</a>
+          </li>
+          <li>
+            <a href="#place">Planing a vacation</a>
+          </li>
+          <li>
+            <a href="#about">About me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <!--section-1-->
+    <main>
+      <section id="learn">
+        <h2>First html page!</h2>
+        <img src="img/html.png" alt="Html Logo" />
+        <p>
+          I am learning html for build web page.Its is goin to be a amazing
+          journey
+        </p>
+        <p>I am planing <em>a vacation</em></p>
+        <p>I live in KS this is <strong>beautiful place</strong></p>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
+          asperiores iste natus magni reprehenderit maxime consequatur, laborum
+          explicabo eveniet aspernatur veritatis. Quae impedit quos rerum natus
+          unde quis expedita incidunt! Praesentium sapiente illum unde saepe
+          cumque corporis asperiores neque, laboriosam delectus necessitatibus
+          facere quisquam possimus odit, dolorum eveniet rem explicabo!
+          Voluptates quam voluptatibus ipsam molestias aut? Quasi animi tempore
+          alias.
+        </p>
+      </section>
+      <hr />
+      <!--Section-2-->
+      <section id="place">
+        <figure>
+          <img
+            src="img/html-images-df.jpg"
+            alt="html output"
+            width="600"
+            height="300"
+          />
+          <figcaption>An Example of Html5 output</figcaption>
+        </figure>
+        <p>I'm heard good thing about this place</p>
+        <h2>Washington DC</h2>
+        &nbsp;&nbsp;&nbsp;..wow
+        <br />
+        <ol>
+          <li>anik</li>
+          <li>anik</li>
+          <li>anik</li>
+        </ol>
+        <!--Details Tag-->
+        <aside>
+          <details>
+            <summary>Guess the number of hours I code per day</summary>
+            <p>
+              I start at <time datetime="08:00"> 8 am </time>and write code
+              <time datetime="PT3H">3 hours </time> every morning
+            </p>
+          </details>
+        </aside>
+        <br /><br /><br />
+        <address>
+          From:California <br />
+          E-mail:ank@gmail.com
+        </address>
+        <br /><br />
+        <details>
+          <summary>Who is he?</summary>
+          <ol>
+            <li>Anik</li>
+            <li>Manik</li>
+            <li>Tonik</li>
+          </ol>
+        </details>
+        <h2>Places I want to avoid</h2>
+        <dl>
+          <dt>North Pole</dt>
+          <dd>Its so cold</dd>
+
+          <dt>South Pole</dt>
+          <dd>Its also cold</dd>
+
+          <dt>Mountain Tops</dt>
+          <dd>These are also cold</dd>
+        </dl>
+      </section>
+
+      <!--Table-->
+      <table>
+        <caption>
+          My daily Shedule
+        </caption>
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            <th>Time</th>
+            <th>Activety</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Morning</th>
+            <td>8am</td>
+            <td>Learn JS</td>
+          </tr>
+          <tr>
+            <th scope="row">lunch</th>
+            <td>2pm</td>
+            <td>Learn Html</td>
+          </tr>
+          <tr>
+            <th rowspan="2" scope="row">Afternoon</th>
+            <td rowspan="2">5pm-8pm</td>
+            <td>Learn C</td>
+          </tr>
+          <tr>
+            <td>Sleep</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              And thats what I do everyday,5 days a week.Just eat,code,sleep &
+              recharge..
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <!--Html Form-->
+    <h2>Contact Me</h2>
+    <p>I'd really like to hear from you</p>
+    <form action="https://httpbin.org/get" method="get">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <p>
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="Jane"
+            autocomplete="on"
+            required
+            autofocus
+          />
+        </p>
+        <p>
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Doe"
+            autocomplete="on"
+            required
+          />
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="your secret"
+            required
+          />
+        </p>
+        <p>
+          <label for="phon">Phon:</label>
+          <input
+            type="tel"
+            name="phon"
+            id="phon"
+            placeholder="333333333"
+            required
+          />
+        </p>
+        <p>
+          <label for="decade">favourite Decade:</label>
+          <input
+            type="number"
+            name="decade"
+            id="decade"
+            min="1950"
+            max="2020"
+            step="10"
+            value="1980"
+          />
+        </p>
+        <p>
+          <label for="coffee">favourite Coffee:</label>
+          <select name="coffee" id="coffee">
+            <optgroup label="Coffees">
+              <option value="regular coffee">Regular Coffee</option>
+              <option value="iced coffee" selected>Iced Coffee</option>
+            </optgroup>
+            <optgroup label="Espresso Drinks">
+              <option value="cuppicino">Cuppicino</option>
+              <option value="americano">Americano</option>
+            </optgroup>
+          </select>
+        </p>
+      </fieldset>
+      <!--Radio Button-->
+      <fieldset>
+        <legend>What is your favourite food:</legend>
+        <p>
+          <input type="radio" name="food" id="tacos" value="tacos" />
+          <label for="tacos">Tacos</label>
+        </p>
+        <p>
+          <input type="radio" name="food" id="alu" value="alu" />
+          <label for="alu">Alu</label>
+        </p>
+        <p>
+          <input type="radio" name="food" id="rice" value="rice" />
+          <label for="rice">Rice</label>
+        </p>
+      </fieldset>
+      <!--Check Box-->
+      <fieldset>
+        <legend>Do you have pets?</legend>
+        <p>
+          <input type="checkbox" name="pets" id="dog" value="dog" />
+          <label for="dog">Dog</label>
+        </p>
+        <p>
+          <input type="checkbox" name="pets" id="cat" value="cat" />
+          <label for="cat">Cat</label>
+        </p>
+        <p>
+          <input type="checkbox" name="pets" id="horse" value="horse" />
+          <label for="horse">Horse</label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Send me a note</legend>
+        <label for="message">Your Message</label>
+        <br />
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Enter your message"
+        ></textarea>
+      </fieldset>
+      <br />
+      <button type="submit">Submit</button>
+      <button
+        type="submit"
+        formaction="https://httpbin.org/post"
+        formmethod="post"
+      >
+        Post
+      </button>
+      <button type="reset">Reset</button>
+    </form>
+    <hr />
+    <!--Section-3 or About Section-->
+    <section id="about">
+      <h6>&copy;Copyright</h6>
+      <footer>
+        <!--&lt means <  &gt means >-->
+        &lt;&lt;&lt; &copy;<abbr title="Frontend Developer"
+          ><a href="about.html">Anik</a></abbr
+        >
+        &gt;&gt;&gt; <br />
+        <a href="#">Top to the page</a>
+      </footer>
+    </section>
+  </body>
+</html>
