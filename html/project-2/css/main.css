@@ -1,0 +1,71 @@
+body {
+  background-image: url("/img/body.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#lTable {
+  width: 100%;
+  font-size: 23px;
+  background-color: blueviolet;
+  text-align: center;
+  border: 1px solid rgb(193, 138, 219);
+}
+
+table,
+tr,
+th,
+td,
+caption {
+  padding: 0.7rem;
+  font-size: 20px;
+  color: rgb(10, 179, 94);
+  background-color: rgb(248, 245, 252);
+  /* border-collapse: collapse; [Remove Table Double unwanted Border]*/
+  border: 1px solid rgb(39, 32, 105);
+}
+
+h1 {
+  color: rgb(97, 8, 105);
+}
+h2 {
+  color: rgb(8, 123, 189);
+  background-color: rgb(176, 180, 184);
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(7, 180, 123);
+}
+
+/* a:visited {
+  color: rgb(107, 7, 82);
+} */
+
+#team2 {
+  text-align: center;
+}
+
+#team3 {
+  text-align: right;
+}
+
+#copy {
+  text-align: center;
+  color: rgb(252, 203, 143);
+}
+section3 {
+  color: rgb(17, 160, 160);
+  background-color: antiquewhite;
+}
+address {
+  font-size: 18;
+}
+#back {
+  background-color: rgb(92, 78, 78);
+  color: yellow;
+  padding: 0.3rem;
+}
