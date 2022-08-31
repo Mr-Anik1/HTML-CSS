@@ -1,0 +1,48 @@
+/* Google font Import */
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap");
+/* Another Google font */
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
+
+body {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+/* input,
+button {
+  font-size: inherit;
+} */
+.line {
+  text-decoration: line-through;
+  text-align: justify;
+}
+
+.indent {
+  text-indent: 3rem;
+}
+.just {
+  text-align: justify;
+}
+
+.gFont {
+  font-size: 2rem;
+  text-align: justify;
+  font-family: "Rubik Maze", cursive;
+}
+.anotherGfont {
+  font-family: "Rubik Dirt", cursive;
+  word-spacing: 0.12em;
+  text-align: justify;
+  text-indent: 4rem;
+  border: 1px solid white;
+  margin: auto;
+  padding: 1rem;
+  width: 50%;
+}
+.nPara {
+  border: 1px solid white;
+  margin: auto;
+  width: 20%;
+  font-family: "Rubik Maze", cursive;
+  color: rgb(201, 84, 17);
+}
+/* 2:15 */

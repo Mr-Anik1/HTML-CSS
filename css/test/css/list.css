@@ -1,0 +1,36 @@
+ol {
+  list-style-type: lower-greek;
+}
+ol li:nth-child(3) {
+  color: rgb(141, 42, 233);
+}
+
+ul {
+  color: rgb(224, 31, 17);
+  list-style-type: square;
+}
+
+/* li:nth-child() দিয়ে nidristo li style করা যায় */
+ul li:nth-child(2) {
+  color: rgb(10, 221, 151);
+}
+
+ul li:nth-child(3)::marker {
+  content: "$ ";
+  color: rgb(8, 37, 131);
+  font-size: 1.5rem;
+}
+/* li::before {
+  content: "";
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-image: url("../img/images.jpeg");
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  background-position: center center;
+  vertical-align: middle;
+} */
+
+/* 2:32 */

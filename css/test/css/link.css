@@ -1,0 +1,26 @@
+p {
+  width: 25%;
+  border: 1px solid white;
+  margin: auto;
+  font-size: 1.5rem;
+}
+.link {
+  width: 50%;
+  border: 1px solid white;
+  margin: auto;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(165, 26, 219);
+}
+a:visited {
+  color: rgb(247, 10, 10);
+}
+a:hover {
+  color: rgb(245, 14, 176);
+}
+a:active {
+  color: rgb(34, 5, 114);
+}
