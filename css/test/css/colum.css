@@ -1,0 +1,32 @@
+body {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.colum {
+  column-count: 4;
+  column-width: 250px;
+  column-rule: 3px solid black;
+  column-gap: 3rem;
+}
+.colum p {
+  margin-top: 0;
+}
+
+.colum h2 {
+  break-inside: avoid;
+  background-color: gray;
+  color: aqua;
+  padding: 1rem;
+  margin-top: 0;
+}
+.colum .quote {
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: red;
+  column-span: all; /*Important*/
+}
+.nowrap {
+  white-space: nowrap; /*Important*/
+}
+/* 3:34 */

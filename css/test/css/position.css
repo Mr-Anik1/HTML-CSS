@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.5rem;
+  min-height: 200vh;
+}
+.outer-container {
+  border: 3px dashed black;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  position: relative;
+}
+.inner-container {
+  border: 3px solid black;
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+}
+.box {
+  width: 120px;
+  height: 100px;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+}
+.absolute {
+  background-color: rgb(20, 182, 182);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.relative {
+  background-color: green;
+  position: relative;
+  top: 210px;
+  left: 100px;
+}
+.fixed {
+  background-color: red;
+  position: fixed;
+  top: 100px;
+}
+.sticky {
+  position: sticky;
+  background-color: rgb(253, 206, 144);
+  color: black;
+  top: 0;
+}
+
+/*Reamber me how to disappered*/
+html {
+  scroll-behavior: smooth;
+}
+section {
+  height: 100vh;
+}
+.blue {
+  background-color: blue;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+header,
+footer {
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+}
+header {
+  position: sticky;
+  top: 0;
+}
+footer {
+  position: sticky;
+  bottom: 0;
+  background-color: rgb(31, 24, 24);
+  font-size: 3rem;
+}
+a,
+a:visited {
+  color: rgb(255, 255, 255);
+}
+.social {
+  background-color: rgb(61, 38, 3);
+  color: rgb(249, 248, 250);
+  border: 1px solid red;
+  border-radius: 1.3rem;
+  font-size: inherit;
+  padding: 1rem;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  z-index: 1;
+}
+/* 3:57 */
