@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 3rem;
+}
+.item {
+  background-color: black;
+  color: white;
+  text-align: center;
+  flex-grow: 1;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100vh;
+  margin: 20px;
+}
+.container-1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 60%;
+}
+.one {
+  flex-basis: 50%;
+  background-color: rgb(153, 11, 11);
+}
+.two {
+  flex-basis: 50%;
+  background-color: blueviolet;
+}
+.three {
+  flex-basis: 100%;
+  background-color: rgb(10, 199, 120);
+}
+.container-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40%;
+}
+.four {
+  flex-basis: 100%;
+  background-color: rgb(124, 7, 75);
+}
+/* extra */
+.five {
+  background-color: rgb(4, 59, 2);
+}
+.six {
+  background-color: rgb(34, 8, 58);
+}
+.seven {
+  background-color: rgb(189, 177, 17);
+}
