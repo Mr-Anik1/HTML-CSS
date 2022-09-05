@@ -11,55 +11,60 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* height: 130vh; */
   align-content: flex-start;
 }
 .container-1 {
   display: flex;
   flex-flow: row wrap;
   flex-basis: 100%;
-  height: 20vh;
+  height: 15vh;
 }
 .container-2 {
   display: flex;
   flex-flow: row wrap;
   flex-basis: 100%;
-  height: 100vh;
 }
 .container-2-1 {
   display: flex;
   flex-flow: row wrap;
-  flex-basis: 60%;
+  flex-basis: 70%;
 }
 .container-2-2 {
   display: flex;
   flex-flow: row wrap;
-  flex-basis: 40%;
+  flex-basis: 30%;
 }
 
 .box {
-  background-color: black;
+  background-color: rgb(49, 46, 46);
   color: white;
   text-align: center;
   flex-grow: 1;
+}
+.fifth {
+  flex-basis: 50%;
+  /* Extra Design */
+  height: 50vh;
+  padding: 10px;
+  text-align: justify;
 }
 .header {
   background-color: rgb(4, 39, 114);
 }
 .one {
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
   background-color: rgb(153, 11, 11);
 }
 .two {
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
   background-color: blueviolet;
 }
 .three {
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
   background-color: rgb(10, 199, 120);
 }
 .four {
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
   background-color: rgb(124, 7, 75);
 }
 .sidebar {
@@ -74,3 +79,10 @@ body {
 .footer {
   background-color: rgb(78, 37, 3);
 }
+
+/* 
+
+Logo=> margin right auto
+
+
+*/
