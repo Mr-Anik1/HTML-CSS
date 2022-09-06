@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding-left: 1px;
 }
 
 .container {
@@ -17,7 +18,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   flex-basis: 100%;
-  height: 15vh;
+  height: 10vh;
 }
 .container-2 {
   display: flex;
@@ -35,54 +36,102 @@ body {
   flex-basis: 30%;
 }
 
+/* Blog Box */
 .box {
-  background-color: rgb(49, 46, 46);
-  color: white;
-  text-align: center;
+  background-color: rgb(38, 39, 39);
+  color: rgb(255, 255, 255);
   flex-grow: 1;
 }
 .fifth {
   flex-basis: 50%;
-  /* Extra Design */
-  height: 50vh;
-  padding: 10px;
   text-align: justify;
+  padding: 20px;
 }
-.header {
-  background-color: rgb(4, 39, 114);
+.fifth:hover {
+  border: 3px solid yellow;
+  /* border-radius: 10px; */
+  background-color: bisque;
+  color: black;
 }
-.one {
-  /* flex-basis: 50%; */
+
+/* ######################################################### */
+/* .one {
+  
   background-color: rgb(153, 11, 11);
 }
 .two {
-  /* flex-basis: 50%; */
+  
   background-color: blueviolet;
 }
 .three {
-  /* flex-basis: 50%; */
+  
   background-color: rgb(10, 199, 120);
 }
 .four {
-  /* flex-basis: 50%; */
+  
   background-color: rgb(124, 7, 75);
-}
+} */
+/* ######################################################### */
+
 .sidebar {
-  background-color: rgb(4, 59, 2);
+  background-color: rgb(100, 219, 184);
+  color: black;
+  padding: 10px;
+  text-align: justify;
 }
+
+.box img {
+  max-width: 100%;
+}
+
+/* Menu */
+.header {
+  background-color: rgb(212, 224, 224);
+  flex-grow: 1;
+}
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.header ul li a,
+.header ul li a:visited {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 3px;
+  padding: 5px 8px;
+  background-color: rgb(54, 32, 4);
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+}
+.header ul li a:hover {
+  background-color: rgb(11, 241, 153);
+  color: rgb(238, 13, 13);
+  border: 3px solid rgb(245, 233, 211);
+  border-radius: 10px;
+}
+
+/* Logo */
+.header ul li.logo img {
+  height: 40px;
+}
+
+.header ul li.logo {
+  margin-right: auto;
+}
+
+/* Footer */
 .container-3 {
   display: flex;
   flex-flow: row wrap;
   flex-basis: 100%;
-  height: 10vh;
 }
 .footer {
-  background-color: rgb(78, 37, 3);
+  background-color: rgb(250, 212, 194);
+  color: rgb(11, 148, 118);
+  font-weight: 500;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-
-/* 
-
-Logo=> margin right auto
-
-
-*/
