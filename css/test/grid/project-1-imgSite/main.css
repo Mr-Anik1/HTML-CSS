@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 3px;
+  /* Dense algorithm */
+  grid-auto-flow: dense;
+}
+.container img {
+  width: 100%;
+  height: 100%;
+  /* object-fit solves the image ratio problem.*/
+  object-fit: cover;
+}
+.horizontal {
+  /* Column starting point is set to auto, and it spans the next two columns.  */
+  grid-column: auto/span 2;
+}
+.vertical {
+  grid-row: auto/span 2;
+  /* grid-row: span 2; */
+}
+.big {
+  grid-column: auto/span 3;
+  grid-row: auto/span 2;
+}

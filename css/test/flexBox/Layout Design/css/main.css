@@ -54,6 +54,21 @@ body {
   color: black;
 }
 
+.blogLink {
+  margin-top: 3px;
+}
+.blogLink a,
+.blogLink a:visited {
+  text-decoration: none;
+  background-color: #8549bd;
+  color: bisque;
+  padding: 3px;
+}
+.blogLink a:hover {
+  color: rgb(11, 175, 224);
+  border: 1px solid rgb(243, 12, 243);
+  border-radius: 10px;
+}
 /* ######################################################### */
 /* .one {
   
@@ -72,13 +87,6 @@ body {
   background-color: rgb(124, 7, 75);
 } */
 /* ######################################################### */
-
-.sidebar {
-  background-color: rgb(100, 219, 184);
-  color: black;
-  padding: 10px;
-  text-align: justify;
-}
 
 .box img {
   max-width: 100%;
@@ -101,7 +109,7 @@ body {
   text-decoration: none;
   margin-right: 3px;
   padding: 5px 8px;
-  background-color: rgb(54, 32, 4);
+  background-color: rgb(73, 33, 6);
   color: rgb(255, 255, 255);
   font-size: 1.6rem;
 }
@@ -121,6 +129,36 @@ body {
   margin-right: auto;
 }
 
+/* SideBar */
+.sidebar {
+  background-color: rgb(100, 219, 184);
+  color: black;
+  padding: 10px;
+  text-align: justify;
+}
+
+.form {
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 5px;
+}
+.form input {
+  font-size: 0.5rem;
+}
+.headAdd {
+  font-size: 2rem;
+  color: rgb(221, 95, 12);
+  background-color: rgb(252, 212, 163);
+  padding: 5px;
+}
+.address {
+  color: rgb(116, 117, 13);
+  font-weight: 550;
+}
+.address a {
+  text-decoration: none;
+  color: red;
+}
 /* Footer */
 .container-3 {
   display: flex;
