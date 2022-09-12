@@ -71,7 +71,15 @@
    grid-column:5/11;  [here starting column 5 and ending column 11]
   
    
+#####   palce-content: align-content  justify-content   #######
 
+  align-content: end;
+  justify-content: center; 
+  =>place-content: end center;
 
-
+Note:If I input 1 value then both value inherit same value
+ place-content: center;
+ =>align-content: center;
+ =>justify-content: center; 
+  
 */
