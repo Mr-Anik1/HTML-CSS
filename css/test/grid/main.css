@@ -77,7 +77,7 @@
   justify-content: center; 
   =>place-content: end center;
 
-Note:If I input 1 value then both value inherit same value
+Note:If I input 1 value, both will inherit the same value
  place-content: center;
  =>align-content: center;
  =>justify-content: center; 
