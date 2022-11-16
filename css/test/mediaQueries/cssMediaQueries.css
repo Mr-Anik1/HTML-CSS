@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap");
+/* font-family: 'Barlow Semi Condensed', sans-serif; */
+
+/* || Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || General Style */
+body {
+  font: 1.5rem "Barlow Semi Condensed", sans-serif;
+  min-height: 100vh;
+
+  background-color: aqua;
+  background-image: radial-gradient(#fafcf1f6, #7a04e9fa);
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+nav,
+main,
+footer {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: rgb(110, 61, 4);
+  color: whitesmoke;
+}
+
+header {
+  top: 0;
+}
+
+nav {
+  background-color: antiquewhite;
+  color: black;
+  padding: 0.5rem;
+  border-bottom: black;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  bottom: 0;
+}
+
+/* ##################################################################### */
+/* 
+    Syntax:
+    @media media-type and(condition:breakpoint){
+        //css rules
+    }
+*/
+/* ##################################################################### */
+
+/* || Small || */
+@media screen and (min-width: 576px) {
+  body {
+    background-color: greenyellow;
+    background-image: radial-gradient(red, rgb(63, 238, 116));
+  }
+  nav {
+    display: none;
+  }
+}
+
+/* || Medium || */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: rgb(247, 214, 31);
+    background-image: radial-gradient(rgb(14, 202, 14), rgb(53, 53, 184));
+  }
+}
+
+/* || Large || */
+@media screen and (min-width: 992px) {
+  body {
+    background-color: rgb(14, 243, 232);
+    background-image: radial-gradient(rgb(142, 8, 231), rgb(14, 243, 232));
+  }
+}
+
+/* || xl || */
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: rgb(241, 9, 118);
+    background-image: radial-gradient(rgb(236, 236, 231), rgb(241, 9, 118));
+  }
+}
+
+/* || 2xl || */
+@media screen and (min-width: 1400px) {
+  body {
+    background-color: rgb(59, 4, 55);
+    background-image: radial-gradient(
+      rgb(255, 255, 255),
+      rgb(152, 7, 196),
+      rgb(235, 252, 9),
+      rgb(179, 24, 3)
+    );
+  }
+}
+
+/* || Mobile Device Landscap */
+@media screen and (max-height: 425px) {
+  body {
+    background-color: red;
+    color: rgb(246, 250, 13);
+    background-image: radial-gradient(rgb(15, 235, 217), rgb(66, 4, 62), red);
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+/* 5h:58min */

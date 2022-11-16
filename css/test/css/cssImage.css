@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.5rem;
+  min-height: 100vh;
+  background-color: aliceblue;
+
+  /* background-image: url(../img/3.jpg),
+    linear-gradient(to left, red, blue, green, yellow, purple);
+  background-repeat: no-repeat;
+  background-position: center; */
+
+  /* //same code//
+  
+  background: no-repeat right center url(../img/3.jpg),
+    linear-gradient(to left, red, blue, green, yellow, purple); */
+}
+/* .profile-pic-figure {
+  width: 35%;
+}
+.profile-pic-figure img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border: 2px solid rgb(124, 218, 182);
+  border-radius: 50%;
+}
+.hero {
+  border: 5px solid black;
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  background-color: bisque;
+  background-image: url("../img/3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.h1 {
+  color: rgb(133, 176, 209);
+  background-color: hsla(298, 81%, 51%, 0.075);
+  padding: 10px;
+} */
+
+/* Anik */
+.clip {
+  font-weight: 800;
+  font-size: 18rem;
+  text-align: center;
+  background-image: url(../img/22.jpg);
+  background-size: 100%;
+  text-transform: uppercase;
+  -webkit-background-clip: text; /*chrome*/
+  background-clip: text; /*Firefox*/
+  color: hsla(143, 75%, 22%, 0.226); /*transparent*/
+}
+/*5:32*/
