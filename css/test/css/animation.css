@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgb(241, 29, 29);
+  display: grid;
+  place-content: center;
+}
+
+/* Transform */
+div:first-child:hover {
+  background-color: rgb(18, 223, 154);
+  border: 3px solid rgb(216, 36, 186);
+  border-radius: 20%;
+
+  transform: translateX(-50%);
+}
+div:nth-child(2):hover {
+  background-color: rgb(93, 19, 190);
+  border: 3px solid rgb(181, 219, 8);
+  color: white;
+
+  transform: rotate(78deg);
+}
+div:nth-child(3):hover {
+  background-color: rgb(90, 11, 79);
+  color: rgb(186, 235, 9);
+  border: 4px dotted rgb(8, 231, 157);
+
+  transform: scaleX(150%);
+}
+div:nth-child(4):hover {
+  background-color: rgb(240, 209, 170);
+  border: 3px solid rgb(7, 231, 7);
+  border-bottom-left-radius: 20%;
+
+  transform: skewX(-10deg);
+}
+
+/* Transition */
+div:nth-child(5):hover {
+  background-color: brown;
+  color: white;
+  border: 3px solid rgb(117, 173, 5);
+
+  transition-property: background-color;
+  transition-duration: 2s;
+}
+
+div:nth-child(6):hover {
+  background-color: rgb(156, 25, 145);
+  color: white;
+  border: 3px solid rgb(78, 5, 173);
+
+  transform: rotate(360deg);
+  transition-property: background-color, transform;
+  transition-duration: 2s, 3s;
+  /* এবার transition কাজ করবে  background-color এবং transform এর উপর। background-color উপর কাজ করবে ২ সেকেন্ড এবং transform এর উপর কাজ করবে ৩ সেকেন্ড । */
+}
+
+/* Animation */
+.animate {
+  /* animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: 3;
+  animation-direction: normal;
+  animation-fill-mode: forwards; */
+
+  animation: 5s ease-in-out 1s 3 normal forwards slide;
+
+  /* 
+  animation: duration timing-function delay iteration-count direction fill-mode name; 
+  */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(600px) rotate(180deg);
+
+    background-color: rgb(87, 13, 172);
+    color: rgb(206, 22, 190);
+    font-weight: bolder;
+    border: 5px solid rgb(13, 235, 198);
+    border-radius: 30%;
+  }
+  66% {
+    transform: translateX(-600px) rotate(-180deg);
+
+    background-color: rgb(10, 214, 214);
+    color: rgb(255, 250, 250);
+    font-weight: bolder;
+    border: 5px solid rgb(26, 197, 10);
+    border-radius: 50%;
+  }
+  100% {
+    transform: translateX(0);
+
+    background-color: rgb(102, 14, 14);
+    color: bisque;
+  }
+}
+
+/* Time: 8:16:00 */

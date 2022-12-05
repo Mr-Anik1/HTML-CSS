@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || CSS Variable || => একবার লিখে বারবার ব্যবহার করা যায় */
+:root {
+  /* color */
+  --BGWHITE: rgb(255, 255, 255);
+  --BGBLUE: rgb(76, 14, 158);
+  --BGRED: rgb(230, 30, 30);
+  --BGPURPLE: rgb(243, 10, 173);
+  /* General */
+  --SHADOWS: 0 9px 7px -5px var(--BGBLUE);
+}
+
+body {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--BGBLUE);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--BGBLUE);
+  color: var(--BGWHITE);
+  padding: 0.2rem;
+  text-align: center;
+}
+
+header a,
+header a:visited {
+  color: var(--BGWHITE);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+header a:hover,
+header a:focus {
+  color: var(--BGRED);
+  background-color: var(--BGWHITE);
+  border: 2px solid var(--BGPURPLE);
+  border-radius: 20px;
+  padding: 0.3rem;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+.card {
+  background-color: rgb(247, 198, 176);
+  border: 4px solid rgb(8, 139, 190);
+  border-radius: 30px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 250px;
+  box-shadow: var(--SHADOWS);
+}
+
+.card:hover {
+  background-color: var(--BGRED);
+  border: 6px double var(--BGPURPLE);
+  color: var(--BGWHITE);
+  font-weight: bolder;
+  font-size: 2rem;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+}
+
+/* Time: 7:49:04 */

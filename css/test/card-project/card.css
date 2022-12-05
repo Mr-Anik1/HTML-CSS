@@ -69,6 +69,7 @@ nav a:visited {
   text-decoration: none;
 }
 
+/* nav :is(a:hover, a:focus){} <=> DRY (Do Not Repeat)*/
 nav a:hover,
 nav a:focus {
   background-color: rgb(255, 255, 255);
@@ -178,4 +179,4 @@ main {
   }
 }
 
-/* Time: 6:32:00 */
+/* Time: 6:52:00 */
