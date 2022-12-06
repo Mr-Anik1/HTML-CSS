@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --HEADER-BGCOLOR: #333;
+  --HEADER-COLOR: white;
+}
+
+html {
+  font-size: 1.5rem;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+header {
+  background-color: rgb(12, 168, 189);
+  color: var(--HEADER-COLOR);
+}
+
+.header-title-line {
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Menu Icon Animation*/
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  background-color: var(--HEADER-COLOR);
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+}
+
+.menu-icon::before {
+  transform: translate(-20px, -12px);
+}
+
+.menu-icon::after {
+  transform: translate(-20px, 12px);
+}
+
+:is(header:hover, header:focus-within) .menu-icon {
+  background-color: transparent;
+  transform: rotate(360deg);
+}
+
+:is(header:hover, header:focus-within) .menu-icon::before {
+  transform: translate(-20px) rotate(45deg);
+}
+
+:is(header:hover, header:focus-within) .menu-icon::after {
+  transform: translate(-20px) rotate(-45deg);
+}
+
+:is(header:hover, header:focus-within) nav {
+  display: block;
+}
+
+nav {
+  display: none;
+  background-color: var(--HEADER-BGCOLOR);
+  transform-origin: top center;
+  animation: showMenu 0.5s ease-in-out forwards;
+}
+
+@keyframes showMenu {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* Nav Link Style */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+nav li {
+  padding: 0.5rem;
+  border: 1px solid var(--HEADER-COLOR);
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+nav a:any-link {
+  text-decoration: none;
+  color: var(--HEADER-COLOR);
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+  transform: scale(1.2);
+  transition: all 0.3s;
+  color: rgb(146, 40, 233);
+}
+/* Time: 8:37:00 */
