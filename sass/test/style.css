@@ -8,13 +8,12 @@
   background-color: rgb(16, 206, 89);
   font-size: 1.5rem;
   color: black;
-  display: flex;
-  justify-content: center;
 }
 .menu ul {
   list-style-type: none;
   display: flex;
-  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1rem;
 }
 .menu ul li {
   padding: 10px 20px;
