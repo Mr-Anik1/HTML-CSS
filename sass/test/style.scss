@@ -1,0 +1,41 @@
+// || RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  background-color: rgb(16, 206, 89);
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    li {
+      padding: 10px 20px;
+      margin: 5px;
+      a {
+        text-decoration: none;
+        color: black;
+        &:visited {
+          color: black;
+        }
+        &:hover {
+          background-color: rgb(90, 14, 141);
+          color: rgb(247, 240, 240);
+          padding: 10px;
+          border-radius: 25px;
+        }
+        &:active {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+// Lession => 3
