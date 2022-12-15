@@ -1,0 +1,46 @@
+// ||HEADER CSS
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: $common_color;
+  top: 0;
+  position: sticky;
+}
+
+.heder__logo {
+  font-weight: bolder;
+}
+
+// ||MENU CSS
+.header__menu {
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+    li {
+      a {
+        text-decoration: none;
+        color: $font_color;
+
+        &:visited {
+          color: $font_color;
+        }
+        &:hover {
+          background-color: rgb(180, 8, 166);
+          color: white;
+          font-weight: bolder;
+          border: 2px solid rgb(1, 87, 51);
+          border-radius: 25px;
+          padding: 0.5rem;
+        }
+        &:active {
+          color: red;
+        }
+      }
+    }
+  }
+}

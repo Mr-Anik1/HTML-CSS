@@ -1,0 +1,11 @@
+// Footer
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 100%;
+  justify-content: center;
+  height: 5vh;
+  background-color: $common_color;
+  bottom: 0;
+  position: sticky;
+}

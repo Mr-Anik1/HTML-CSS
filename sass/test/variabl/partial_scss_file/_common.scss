@@ -1,0 +1,25 @@
+// ||RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ||VARIABLE
+$common_color: rgb(240, 164, 141);
+$font_color: black;
+
+//
+.container {
+  font-size: 1.5rem;
+  color: $font_color;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+// ||MIXIN
+@mixin border($width, $style, $color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}

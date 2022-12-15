@@ -76,8 +76,10 @@
   flex-grow: 1;
   align-items: center;
   justify-content: center;
-  background-color: wheat;
-  border: 2px solid red;
+  background-color: rgb(250, 229, 190);
+  border-width: 3px;
+  border-style: double;
+  border-color: rgb(11, 248, 169);
   border-radius: 25px;
   padding: 3rem;
 }
@@ -89,7 +91,9 @@
   place-content: center;
   gap: 1rem;
   margin: 5rem 0.5rem;
-  border: 10px solid rgb(240, 164, 141);
+  border-width: 10px;
+  border-style: dotted;
+  border-color: rgb(240, 164, 141);
 }
 
 .about__title {

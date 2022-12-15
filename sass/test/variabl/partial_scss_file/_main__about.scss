@@ -1,0 +1,25 @@
+// ||ABOUT CSS
+.main__about {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 100%;
+  place-content: center;
+  gap: 1rem;
+  margin: 5rem 0.5rem;
+
+  // Mixin has been used
+  // location common.scss
+  // border: 10px solid $common_color;
+  @include border(10px, dotted, $common_color);
+}
+
+.about__title {
+  flex-basis: 10%;
+  color: $common_color;
+  padding: 0.5rem;
+}
+
+.about__datail {
+  flex-basis: 75%;
+  padding: 0.5rem;
+}
