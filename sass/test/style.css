@@ -34,4 +34,107 @@
 }
 .menu ul li a:active {
   color: red;
+}
+
+.box-1 {
+  width: 150px;
+  height: 2rem;
+}
+
+.main-6 {
+  font-size: 200px;
+}
+
+.box-2 {
+  width: 200px;
+  height: 4rem;
+}
+
+.main-7 {
+  font-size: 400px;
+}
+
+.box-3 {
+  width: 250px;
+  height: 6rem;
+}
+
+.main-8 {
+  font-size: 600px;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: yellow;
+}
+
+.btn-success {
+  background-color: blue;
+}
+
+.btn-danger {
+  background-color: red;
+}
+
+.box-one {
+  background-color: red;
+  border-width: 2px;
+  border-radius: 25px;
+}
+
+.box-two {
+  background-color: blue;
+  border-width: 3px;
+  border-radius: 30px;
+}
+
+.box-three {
+  background-color: grey;
+  border-width: 2px;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

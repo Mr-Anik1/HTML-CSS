@@ -37,4 +37,57 @@
   }
 }
 
-// Lession => 3
+// Loop
+@for $i from 1 through 3 {
+  .box-#{$i} {
+    width: 100px + (50px * $i);
+    height: 2rem * $i;
+  }
+
+  .main-#{$i + 5} {
+    font-size: 200px * $i;
+  }
+}
+
+// for each loop in scss
+// first run uppercase then run lowercase and finally run lowercase
+@each $i in (uppercase, lowercase, capitalize) {
+  .text-#{$i} {
+    text-transform: $i;
+  }
+}
+
+// LIST
+$list: left, right, center, justify;
+@each $i in $list {
+  .text-#{$i} {
+    text-align: $i;
+  }
+}
+
+// MAP
+$map: (h1, 50px, 60px, 900), (h2, 40px, 50px, 800), (h3, 30px, 40px, 700);
+
+@each $name, $font_size, $line_height, $font_weight in $map {
+  #{$name} {
+    font-size: $font_size;
+    line-height: $line_height;
+    font-weight: $font_weight;
+  }
+}
+
+$button: (primary, yellow), (success, blue), (danger, red);
+@each $name, $color in $button {
+  .btn-#{$name} {
+    background-color: $color;
+  }
+}
+
+$box: (one, red, 2px, 25px), (two, blue, 3px, 30px), (three, grey, 2px, 10px);
+@each $name, $color, $border_width, $border_radious in $box {
+  .box-#{$name} {
+    background-color: $color;
+    border-width: $border_width;
+    border-radius: $border_radious;
+  }
+}
