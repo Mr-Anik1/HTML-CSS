@@ -1,0 +1,50 @@
+/* Univarsal selector */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* Attribute selector */
+input[type="number"] {
+  background-color: rgb(209, 204, 204);
+  color: rgb(168, 17, 148);
+}
+/* 
+  // Links with wiki anywhere in the page
+  a[href*="wiki"]{
+    color:blue;
+  }
+
+  // Links with a URL that starts with #
+  a[href^="#"]{
+    color:red;
+  }
+
+  // Links with a URL that ends with .org
+  a[href$=".org"]{
+    color:green;
+  }
+*/
+
+/* Descendant Combinatro -> select all li which is thousand step under of ol*/
+/* ol li {
+  border: 2px solid green;
+} */
+
+/* Child Combinator -> select only li which is one step under of ol */
+ol > li {
+  border: 2px solid rebeccapurple;
+}
+
+/* Compound Selectors -> we can combine class,id and element selectors(without spaces). It selects div that have a class called special*/
+div.special {
+  color: red;
+}
+
+/* select only those h2 that have a class called special */
+h2.special {
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+}
