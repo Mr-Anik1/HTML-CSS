@@ -1,0 +1,111 @@
+/* It selects only first element(that come immediately) after the parent element. Here only first paragraph color will be changed, not second or third paragraph. */
+h1 + p {
+  color: rebeccapurple;
+}
+
+/* It selects all siblings elements after the parent elements. But it doesn't select nested elements, like paragraph inside of div. Here the first 3 paragraph has selected(seblings), but nested paragraph which is under of div doesn't select.*/
+h2 ~ p {
+  color: rgb(180, 15, 125);
+  font-weight: bold;
+}
+
+/* Psudo Classes 
+
+  :hover, :visited, :active, :nth-child(), :nth-last-child(), :first-child, :nth-of-type(), :nth-last-of-type(),:not ,:focus 
+  
+  They are psudo class.
+*/
+input:disabled {
+  background-color: rgb(233, 46, 32);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(245, 190, 10);
+}
+
+.list1 li:first-of-type {
+  color: rgb(10, 187, 84);
+}
+
+/* Which position of children wanted to select. Here I select 4th position children.*/
+.list1 li:nth-child(4) {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(118, 41, 207);
+}
+
+/* It select every second element, If I use 3n then it selects every third element. */
+.list2 li:nth-of-type(2n) {
+  color: red;
+  font-size: 20px;
+  background-color: rgb(98, 218, 226);
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  cursor: pointer;
+  border: 1px solid green;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 13px;
+  background-color: rgb(83, 11, 90);
+  border-radius: 15px;
+  padding: 5px 7px;
+}
+
+/* ||Pseudo element||
+Pseudo element select specific part of the selected elements. 
+
+::before, ::after, ::first-letter, ::content are pseudo elements.
+*/
+
+/*Here ::first-line pseudo element used to change background color first line of paragraphs.*/
+.pseudo-elem p::first-line {
+  background-color: rgb(115, 207, 99);
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+/* Here :first-of-type pseudo class selects the first paragraph and ::first-letter pseudo element used to change the first letter of the paragraph. */
+.pseudo-elem p:first-of-type::first-letter {
+  font-size: 50px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: rgb(96, 73, 179);
+}
+
+/* ::selection pseudo element applies styles to the part of a document that has been highlighted by user.(dragging the mouse accross the text) */
+.pseudo-elem p::selection {
+  background-color: yellow;
+  color: red;
+}
+
+/* EXERCISE */
+
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px orange;
+}
+
+ul.blah li:nth-child(2n) {
+  background-color: magenta;
+}
+
+.exercise p::first-letter {
+  color: blue;
+  font-size: 30px;
+}
+
+footer a:hover {
+  color: magenta;
+}
+
+.exercise h3 {
+  font-size: 60px;
+  text-align: center;
+  color: rgb(117, 45, 185);
+  border: 5px solid rgb(221, 190, 14);
+  margin-bottom: 0;
+}
+
+.exercise h4 {
+  font-size: 30px;
+  margin-bottom: 0;
+}

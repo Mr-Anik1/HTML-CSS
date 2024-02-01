@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;700&family=Mukta:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bitter", serif;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+}
+h2 {
+  font-size: 50px;
+  letter-spacing: -0.5px;
+}
+h3 {
+  font-size: 38px;
+  letter-spacing: 0px;
+}
+h4 {
+  font-size: 30px;
+  letter-spacing: 0.25px;
+}
+h5 {
+  font-size: 24px;
+  letter-spacing: 0.25px;
+}
+h6 {
+  font-size: 20px;
+  letter-spacing: 0.25px;
+}
+
+code {
+  color: #e95400;
+  font-weight: bold;
+}
+
+/*|| HEADER ||*/
+.hero {
+  background-color: rgb(52, 15, 155);
+  height: 100vh;
+  color: rgb(231, 238, 238);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  margin-top: 0;
+}
+
+.hero h1,
+.hero p {
+  width: 75%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.hero hr {
+  width: 75%;
+  max-width: 700px;
+}
+
+/*|| MAIN ||*/
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 23px;
+}
+
+.content h3 {
+  text-transform: uppercase;
+  margin-top: 45px;
+}
+
+.content p {
+  margin: 10px 0;
+}
+
+.content ::selection {
+  background-color: yellow;
+}
+
+.info {
+  text-align: center;
+  font-family: "Bitter", serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 30px 0;
+  letter-spacing: 1.5px;
+}
+
+.info span {
+  color: #e95400;
+}
+
+.headline {
+  margin: 40px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.quote {
+  font-size: 14px;
+  margin: 32px 0 32px 32px;
+  font-style: italic;
+  border-left: 2px solid #e95400;
+  padding-left: 16px;
+}
+
+.quote cite {
+  display: block;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+/*|| FOOTER ||*/
+footer {
+  background-color: rgb(52, 15, 155);
+}
+
+.footer-links {
+  list-style-type: none;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(15, 231, 159);
+}
+
+.footer-links li a:hover {
+  color: rgb(193, 19, 228);
+  text-decoration: underline;
+}

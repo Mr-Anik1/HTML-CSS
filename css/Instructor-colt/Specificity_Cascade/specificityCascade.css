@@ -1,0 +1,51 @@
+/*Specifity:
+
+1.Inline Styles
+2.ID Selectors
+3.Class|Attribute|Pseudo Classes
+4.Type(p,h1,span)|Pseudo elements 
+
+
+
+.featured span 
+
+ 0              1                    1
+---       --------------        --------------
+ID            Class                  Type 
+            attribute           Pseudo-elements 
+           Pseudo-class          
+
+
+
+.main a:hover 
+
+ 0              2                     1
+---       --------------        --------------
+ID            Class                  Type 
+            attribute           Pseudo-elements 
+           Pseudo-class          
+
+
+
+
+div a
+
+ 0              0                      2
+---       --------------        --------------
+ID            Class                  Type 
+            attribute           Pseudo-elements 
+           Pseudo-class          
+
+
+
+
+#go p
+
+ 1              0                     1
+---       --------------        --------------
+ID            Class                  Type 
+            attribute           Pseudo-elements 
+           Pseudo-class          
+
+
+*/
