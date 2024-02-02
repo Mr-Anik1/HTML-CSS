@@ -1,0 +1,50 @@
+/* em concepts(parent child relationship):
+
+1em equals the font size of the parent, and 2em is twice font size of the parents.
+
+If the parent font size is 24px,
+then child 2em will be 48 px.
+
+If the parent font size is 20px,
+then child 3em will be 60px.
+*/
+.per {
+  width: 40%;
+  margin: 0 auto;
+  min-height: 100px;
+  height: 30%;
+  background-color: bisque;
+  font-size: 24px;
+}
+
+/* Here the parent(.per div) font-size is 24px, now the child(p that is inside the .per div) font-size 2em  means parent(24px)*2=48px */
+.per p {
+  background-color: rgb(8, 192, 192);
+  width: 50%;
+  font-size: 2em;
+}
+
+/*||rem(root em) concepts:||
+
+rem is not depends on parents, it only depends on root.
+
+If root font-size is 16 px, then 2rem will be 32 px and 4rem will be 64px.
+
+*/
+/* My root font-size is 16px, so h1 font-size will be 16*4=64px */
+h1 {
+  font-size: 2rem;
+}
+
+/* 
+In previous I saw that, .per p{} 2em font size was 48px,that is double of parent(.per) font-size(24px).
+
+
+If I use 2rem insted of 2em in the .per p{},then the result will be changed and it will be 32px which is double of root font-size. So it is proved that rem doesn't depend on parent, it depends only root.
+
+.per p {
+  background-color: rgb(8, 192, 192);
+  width: 50%;
+  font-size: 2rem; // 32px
+}
+*/
