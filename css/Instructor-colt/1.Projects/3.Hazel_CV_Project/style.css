@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  background-color: #f08e80;
+  min-height: 90vh;
+  display: inline-block;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 24px 32px;
+}
+
+.navbar .links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar .links a:hover {
+  color: rgb(85, 5, 165);
+}
+
+.navbar p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar .contact {
+  text-decoration: none;
+  background-color: white;
+  color: #da6e5e;
+  padding: 16px 24px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar .contact:hover {
+  opacity: 0.7;
+  color: rgb(71, 7, 136);
+}
+
+.hero-content {
+  padding: 0 15%;
+}
+
+.tagline {
+  font-size: 3rem;
+  color: white;
+  letter-spacing: 2px;
+  padding: 32px 0;
+  margin-bottom: 20px;
+}
+
+.two-column-section {
+  font-size: 2rem;
+}
+
+.two-column-section > p {
+  width: 50%;
+  float: left;
+}
+
+.two-column-section .mission-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(255, 232, 212);
+}
+
+.two-column-section .special {
+  margin: 35px 0;
+}
+
+.two-column-section .skills {
+  width: 50%;
+  float: left;
+  list-style: none;
+  margin: 35px 0;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.two-column-section .skills li {
+  width: 50%;
+  float: left;
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+/* Blog Section Start */
+.blog-section {
+  background-color: #ffffff;
+  display: inline-block;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.blog-content {
+  padding: 0 15%;
+}
+
+.two-column-section .blog-posts {
+  width: 50%;
+  float: left;
+}
+
+.blog-heading {
+  font-size: 1.5rem;
+}
+.blog-text {
+  font-size: 1rem;
+}
+
+.blog-posts p {
+  margin: 8px 0;
+}
+
+.blog-posts .blog-date {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 32px;
+}
+
+/* Event Section */
+.event-section {
+  background-color: #58e0d5;
+  min-height: 60vh;
+  padding: 30px 0;
+
+  /* display: inline-block;
+  width: 100%; */
+}
+
+.event-content {
+  padding: 0 15%;
+}
+
+.two-column-section .events-card {
+  width: 50%;
+  float: left;
+}
+
+.event-heading {
+  font-size: 1.5rem;
+}
+
+.event-location {
+  font-size: 1rem;
+}
+
+.events-card p {
+  margin: 8px 0;
+}
+
+.events-card .event-date {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 32px;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(6, 75, 52);
+}
+
+.footer-content {
+  margin: 0 auto;
+  max-width: 40vw;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-content img {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 7px;
+}
+
+.footer-content a:hover {
+  opacity: 0.6;
+}
+
+.footer-content span {
+  color: red;
+  font-weight: bold;
+}

@@ -1,0 +1,35 @@
+.box1 {
+  background-color: blueviolet;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.box2 {
+  background-color: rgb(12, 175, 6);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.box3 {
+  background-color: rgb(197, 18, 167);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.box4 {
+  background-color: rgb(235, 202, 17);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

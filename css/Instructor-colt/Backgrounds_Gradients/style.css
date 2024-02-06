@@ -1,0 +1,44 @@
+.box {
+  height: 500px;
+  width: 500px;
+  border: 5px solid red;
+
+  /* background-image: url("images/woman.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: bisque;
+  background-size: cover;
+  padding: 10px;
+  background-clip: content-box; */
+
+  /* filter: grayscale(40%) contrast(50%); */
+
+  /* background-image: linear-gradient(
+    rgb(22, 168, 46),
+    rgb(132, 25, 158),
+    rgb(59, 21, 163)
+  ); */
+
+  /* background: radial-gradient(circle, red 30%, yellow, rgb(14, 212, 130)); */
+
+  /* border-radius: 50%;
+  background: conic-gradient(
+    rgb(3, 185, 43) 36deg,
+    rgb(8, 119, 153) 36deg,
+    170deg,
+    rgb(100, 12, 141) 170deg
+  ); */
+
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent 0 20px,
+    black 20px 40px
+  );
+
+  /* background: repeating-radial-gradient(
+    rgb(17, 7, 7),
+    black 5px,
+    rgb(255, 255, 255) 5px,
+    white 10px
+  ); */
+}

@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 7px;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: red;
+  position: fixed;
+  top: 0;
+  right: 0px;
+}
+
+.sidebar button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
