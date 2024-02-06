@@ -1,0 +1,49 @@
+/* Transition: property duration timing-function delay */
+
+.btn {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid red;
+  background-color: bisque;
+  text-decoration: none;
+  border-radius: 4px;
+
+  /* Here I use two transition property-> transform and background-color and background-color has delay time. */
+  transition: transform 2s ease-in, background-color 1.5s ease-out 0.5s;
+}
+
+.btn:hover {
+  background-color: rgb(7, 40, 131);
+  color: rgb(49, 255, 152);
+  border: 2px solid rgb(89, 146, 253);
+
+  transform: translateX(100px);
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+  display: inline-block;
+  transition: transform 1.5s;
+}
+
+/* translate(x,y) */
+.first:hover {
+  transform: translate(150px, 200px);
+  background-color: blueviolet;
+}
+
+.second {
+  transform: rotate(45deg);
+}
+
+.third:hover {
+  transform: rotate(0.5turn);
+  background-color: rgb(9, 211, 70);
+}
+
+h1 {
+  display: inline-block;
+  transform: rotate(50deg);
+}
