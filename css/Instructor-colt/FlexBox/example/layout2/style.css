@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+}
+
+.box.b1 {
+  background-color: rgb(108, 8, 240);
+}
+.box.b2 {
+  background-color: rgb(184, 137, 7);
+}
+.box.b3 {
+  background-color: rgb(125, 216, 22);
+}
+.box.b4 {
+  background-color: rgb(7, 158, 88);
+}
+.box.b5 {
+  background-color: rgb(133, 1, 82);
+}
+.box.b6 {
+  background-color: rgb(162, 13, 207);
+}
+.box.b7 {
+  background-color: rgb(7, 35, 161);
+}
+.box.b8 {
+  background-color: rgb(197, 172, 152);
+}
+
+.box {
+  flex-grow: 1;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+}
+
+.container1 .b1 {
+  flex-basis: 50%;
+}
+.container1 .b2 {
+  flex-basis: 50%;
+}
+
+.container2 {
+  display: flex;
+  flex-basis: 100%;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+}
+
+/* 3-1 */
+.container-3-1 {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 70%;
+}
+
+.container-3-1-1 {
+  display: flex;
+  flex-basis: 20%;
+}
+
+.container-3-1-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 80%;
+}
+.box.b5 {
+  flex-basis: 100%;
+}
+.box.b6 {
+  flex-basis: 50%;
+}
+.box.b7 {
+  flex-basis: 50%;
+}
+
+/* 3-2 */
+.container-3-2 {
+  display: flex;
+  flex-basis: 30%;
+}

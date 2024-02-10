@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(233, 223, 255);
+  color: rgb(44, 44, 44);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+h1 {
+  color: rgb(83, 49, 156);
+}
+
+.container {
+  background-color: white;
+  width: 100%;
+  max-width: 56rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.25rem;
+  padding: 0 4rem 4rem 4rem;
+  position: relative;
+}
+
+.tabs {
+  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  color: rgb(200, 175, 255);
+  margin: 0 0 2rem 0;
+  padding: 1rem;
+}
+
+.tabs p {
+  padding: 0.5rem;
+}
+
+.tabs p:hover {
+  color: rgb(83, 49, 156);
+  cursor: pointer;
+}
+
+.tabs p.active {
+  color: rgb(83, 49, 156);
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  top: 6.2rem;
+  background-color: rgb(231, 231, 231);
+}
+
+.tabs .active::before {
+  content: "";
+  width: 200%;
+  height: 4px;
+  background-color: rgb(83, 49, 156);
+  position: absolute;
+  bottom: -3.03875rem;
+  left: -50%;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.toggle-wrapper {
+  margin: 1.5rem 0;
+  display: flex;
+}
+
+.toggle-wrapper img {
+  height: 2.5rem;
+  margin: 0 1rem;
+}
+
+.toggle {
+  background-color: rgb(83, 49, 156);
+  height: 2rem;
+  width: 8.75rem;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 4px 0 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.toggle span:first-of-type {
+  color: white;
+}
+
+.toggle span:last-of-type {
+  background-color: white;
+  color: rgb(83, 49, 156);
+  padding: 4px 16px;
+  border-radius: 20px;
+}
+
+/* Session Card */
+.session-card {
+  margin: 0.5rem 0 1.5rem 0;
+  width: 50%;
+  padding: 1.5rem 0;
+  background-color: rgb(222, 224, 223);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.session-card .card-heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.session-card .card-number {
+  font-weight: bold;
+  font-size: 4rem;
+  color: rgb(83, 49, 156);
+}
+
+.container .container-description {
+  line-height: 1.7rem;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Progress Bar */
+.slider {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.slider .bar {
+  width: 100%;
+  height: 1rem;
+  background-color: rgb(248, 248, 248);
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 1.25rem;
+}
+
+.slider .progress {
+  width: 31%;
+  height: 1rem;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 10, 74, 1) 36%,
+    rgba(83, 49, 156, 1) 100%
+  );
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider .point {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-color: rgb(83, 49, 156);
+  border-radius: 50%;
+  position: absolute;
+  top: -0.375rem;
+  left: 98%; /*point parent is progress(which width is 31% of the slider, so here point width 98% means 30.38% width of the slider)*/
+  border: 3px solid white;
+  transition: transform 0.15s ease;
+}
+
+.slider .point:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.slider .scale {
+  width: 100%;
+  margin-top: 0.375rem;
+}
+
+.slider .scale ul {
+  list-style: none;
+  color: rgb(166, 166, 166);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
