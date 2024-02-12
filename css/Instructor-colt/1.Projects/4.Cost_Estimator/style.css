@@ -29,7 +29,7 @@ h1 {
   justify-content: center;
   align-items: center;
   border-radius: 1.25rem;
-  padding: 0 4rem 4rem 4rem;
+  padding: 0 4rem;
   position: relative;
 }
 
@@ -201,4 +201,87 @@ h1 {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
+}
+
+/* Card Wrapper */
+.card-wrapper {
+  display: flex;
+  margin: 1.5rem 0;
+}
+
+.card-wrapper .card {
+  background-color: rgb(250, 247, 255);
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 11px 1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: bold;
+  color: rgb(83, 49, 156);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  position: relative;
+}
+
+.card-wrapper .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px 6px rgba(3, 3, 3, 0.1);
+}
+
+.card-wrapper .card .top-section {
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+.card-wrapper .card p {
+  margin: 4px 0;
+}
+
+.card-wrapper .card .price {
+  font-size: 2.625rem;
+  color: rgb(44, 44, 44);
+}
+
+.card-wrapper .card .card-line {
+  height: 3px;
+  width: 40%;
+  border: 1px solid rgb(210, 210, 210);
+  background-color: rgb(206, 200, 200);
+  border-radius: 2px;
+  margin: 1rem 0;
+}
+
+.card-wrapper .card button {
+  color: white;
+  background-color: rgb(83, 49, 156);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.card-wrapper .card button:hover {
+  cursor: pointer;
+  transform: scale(0.92);
+}
+
+.card-wrapper .card .save-header {
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 10, 74, 1) 36%,
+    rgba(83, 49, 156, 1) 100%
+  );
+  width: 100%;
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
