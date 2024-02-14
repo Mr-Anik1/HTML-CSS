@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: blueviolet;
+  border: 3px solid rgb(238, 241, 241);
+  height: 200px;
+  flex: 1 1 20%;
+  /* margin: 5px; */
+}
+
+.box:nth-of-type(2n) {
+  background-color: rgb(10, 204, 230);
+}
+
+@media only screen and (max-width: 1400px) {
+  .box {
+    flex: 1 1 25%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .box {
+    flex: 1 1 33.33%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .box {
+    flex: 1 1 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .box {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,71 @@
+/* h1 {
+  font-size: 3rem;
+}
+
+@media (min-width: 420px) {
+  body {
+    background-color: rgb(17, 155, 59);
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    background-color: rgb(173, 14, 179);
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: rgb(7, 127, 143);
+  }
+}
+
+@media only print {
+  h1 {
+    font-size: 8rem;
+  }
+} */
+
+/* 0-480 */
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: rebeccapurple;
+  }
+
+  body::before {
+    content: "Mobile Size";
+  }
+}
+
+/* 481-720 */
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+  body {
+    background-color: rgb(3, 178, 184);
+  }
+
+  body::before {
+    content: "Tablet Size";
+  }
+}
+
+/* 721-1024 */
+@media only screen and (min-width: 721px) and (max-width: 1024px) {
+  body {
+    background-color: rgb(54, 184, 3);
+  }
+
+  body::before {
+    content: "Small Desktop Size";
+  }
+}
+
+/* 1025- */
+@media only screen and (min-width: 1025px) {
+  body {
+    background-color: rgb(184, 3, 175);
+  }
+
+  body::before {
+    content: "Large Desktop Size";
+  }
+}

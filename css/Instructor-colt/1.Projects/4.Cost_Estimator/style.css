@@ -285,3 +285,86 @@ h1 {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
+
+/*|| MEDIA QUERY ||*/
+@media only screen and (max-width: 900px) {
+  .session-card {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .session-card {
+    width: 60%;
+  }
+
+  .card-wrapper {
+    flex-wrap: wrap-reverse;
+  }
+
+  .card-wrapper .card {
+    width: 100%;
+    margin: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .tabs .active::before {
+    width: 150%;
+    left: -22%;
+  }
+
+  .session-card {
+    width: 70%;
+  }
+
+  .card-wrapper .card {
+    margin: 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .session-card {
+    width: 80%;
+  }
+
+  .tabs .active::before {
+    width: 110%;
+    left: -1%;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .tabs {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1rem 0;
+  }
+
+  .line {
+    top: 11rem;
+  }
+
+  .tabs .active::before {
+    width: 100%;
+    top: 2rem;
+    left: 1%;
+  }
+
+  .toggle-wrapper {
+    margin: 0 0 1.5rem 0;
+  }
+
+  .session-card {
+    width: 90%;
+  }
+}

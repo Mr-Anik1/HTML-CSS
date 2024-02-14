@@ -101,3 +101,159 @@ body {
   margin-top: 100px;
   font-size: 20px;
 }
+
+@media only screen and (max-width: 720px) {
+  .card {
+    width: 100%;
+  }
+
+  .card img {
+    height: 400px;
+  }
+
+  .about {
+    margin: 90px 0 90px 110px;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 605px) {
+  .navbar h1 {
+    margin-left: 90px;
+  }
+
+  .nav-links {
+    margin: 20px 0 20px 150px;
+  }
+
+  .about {
+    margin: 90px 0 90px 100px;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .navbar h1 {
+    margin-left: 50px;
+  }
+
+  .nav-links {
+    margin: 20px 0 20px 120px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .navbar h1 {
+    margin-left: 25px;
+  }
+
+  .nav-links {
+    margin: 20px 0 20px 80px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    padding-left: 10px;
+  }
+
+  .navbar h1 {
+    margin-left: 10px;
+  }
+
+  .nav-links {
+    margin: 20px 0 10px 55px;
+  }
+
+  .card {
+    padding-right: 10px;
+  }
+
+  .about {
+    margin: 90px 0 90px 60px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  body {
+    padding-left: 5px;
+  }
+
+  .card {
+    padding-right: 5px;
+  }
+
+  .card img {
+    height: 250px;
+  }
+
+  .about {
+    margin: 90px 0 90px 20px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .nav-links {
+    margin: 20px 0 20px 130px;
+  }
+
+  .about {
+    margin: 90px 0 90px 120px;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .nav-links {
+    margin-left: 250px;
+  }
+  .card img {
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .nav-links {
+    margin-left: 310px;
+  }
+
+  .about {
+    margin: 90px 0 90px 200px;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  .card img {
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .card img {
+    height: 400px;
+  }
+
+  .about {
+    margin: 90px 0 90px 200px;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .card img {
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 1850px) {
+  .card img {
+    height: 550px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .card img {
+    height: 600px;
+  }
+}
