@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto; /* Middle of the page */
+}
+
+/* Header Section */
+.navbar {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left p {
+  margin: 0 0.8rem 0 0;
+}
+
+.nav-left .name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+.nav-left .artist {
+  background-color: rgb(243, 240, 240);
+  box-shadow: 0 2px 2px rgb(196, 190, 190);
+  border-radius: 10px;
+  padding: 3px 8px;
+  font-size: 0.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-right a {
+  font-size: 1rem;
+  margin: 0 0 0 1.2rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.nav-right a img {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.nav-right a:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/*|| HAMBURGER || */
+.hamburger {
+  height: 3.125rem;
+  width: 3.125rem;
+  display: none;
+}
+
+.bar {
+  background-color: black;
+  height: 4px;
+  width: 2.25rem;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+/* Main Section */
+.project {
+  position: relative;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255, 0.2);
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.project .overlay:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.project .overlay.white {
+  color: white;
+}
+
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas:
+    "eth eth alphabet"
+    "eth eth traveler"
+    "astro cube traveler"
+    "cup insta insta"
+    "cup insta insta"
+    "foam foam dimensional"
+    "foam foam dimensional";
+}
+
+#eth {
+  grid-area: eth;
+}
+#alphabet {
+  grid-area: alphabet;
+}
+#traveler {
+  grid-area: traveler;
+}
+#astro {
+  grid-area: astro;
+}
+#cube {
+  grid-area: cube;
+}
+#cup {
+  grid-area: cup;
+}
+#insta {
+  grid-area: insta;
+}
+#foam {
+  grid-area: foam;
+}
+#dimensional {
+  grid-area: dimensional;
+}
+
+/* Footer */
+.footer-txt {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 3rem 0;
+}
+
+@media only screen and (max-width: 1100px) {
+  .project-grid {
+    gap: 1rem;
+    grid-template-areas:
+      "eth eth"
+      "alphabet traveler"
+      "astro cube"
+      "insta insta"
+      "cup foam"
+      "dimensional dimensional";
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 93%;
+  }
+
+  .project-grid {
+    margin-top: 2.8rem;
+    gap: 0.5rem;
+    grid-template-areas:
+      "eth eth"
+      "alphabet alphabet"
+      "traveler traveler"
+      "astro cube"
+      "insta insta"
+      "cup cup"
+      "foam foam"
+      "dimensional dimensional";
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  .navbar .nav-right {
+    display: none;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project .overlay {
+    font-size: 1.5rem;
+  }
+
+  .footer-txt {
+    padding: 2rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .container {
+    max-width: 96%;
+  }
+
+  .navbar {
+    padding: 0.8rem 0.6rem;
+  }
+
+  .project-grid {
+    gap: 0.3rem;
+  }
+
+  .project .overlay {
+    font-size: 1rem;
+  }
+
+  .footer-txt {
+    padding: 1.5rem 0;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .navbar {
+    padding: 0.8rem 0.4rem;
+  }
+
+  .project-grid {
+    gap: 0.2rem;
+  }
+
+  .project .overlay {
+    font-size: 0.7rem;
+  }
+
+  .footer-txt {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* @media only screen and (min-width: 769px) {
+  .navbar .hamburger {
+    display: none;
+  }
+} */
+/* #eth {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+#alphabet {
+  grid-column: 3 / span 1;
+  grid-row: 1/2;
+}
+
+#traveler {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 2;
+}
+
+#astro {
+  grid-column: 1/2;
+  grid-row: 3 / 4;
+}
+
+#cube {
+  grid-column: 2/3;
+  grid-row: 3 / 4;
+}
+
+#cup {
+  grid-row: 4/6;
+  grid-column: 1/2;
+}
+
+#insta {
+  grid-column: 2 / span 2;
+  grid-row: 4/6;
+}
+
+#foam {
+  grid-row: 6/8;
+  grid-column: 1/3;
+}
+
+#dimensional {
+  grid-column: 3 / span 1;
+  grid-row: 6/8;
+} */
