@@ -1,0 +1,97 @@
+/* .box {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(5, 160, 52);
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation-name: movebox;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+} */
+
+/* @keyframes colorchange {
+  from {
+    background-color: brown;
+    color: rgb(191, 231, 12);
+    border-radius: 5%;
+  }
+  to {
+    background-color: rgb(13, 132, 168);
+    color: blueviolet;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* @keyframes movebox {
+  0% {
+    transform: translateX(0);
+    background-color: brown;
+    color: rgb(191, 231, 12);
+    border-radius: 5%;
+  }
+
+  50% {
+    transform: translateX(70vw);
+    border-radius: 50%;
+  }
+
+  70% {
+    transform: translateX(50vw);
+    border-radius: 30%;
+  }
+
+  100% {
+    transform: translateX(0);
+    background-color: rgb(13, 132, 168);
+    color: blueviolet;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 5%;
+  }
+} */
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  height: 50px;
+  width: 50px;
+  border: 5px solid rgb(253, 251, 251);
+  border-top-color: rgb(38, 166, 240);
+  border-bottom-color: rgb(11, 196, 134);
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
