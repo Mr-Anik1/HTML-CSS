@@ -1,0 +1,26 @@
+blockquote {
+  margin-left: 20%;
+  width: 50%;
+  border-left: 3px solid rgb(117, 112, 112);
+  padding: 20px 0 20px 40px;
+  position: relative;
+}
+
+blockquote::before,
+blockquote::after {
+  font-size: 2.5rem;
+  position: absolute;
+}
+
+blockquote::before {
+  content: open-quote;
+  top: -5px;
+  left: -4px;
+  margin-left: 20px;
+}
+
+blockquote::after {
+  content: close-quote;
+  padding-left: 9px;
+  bottom: -11px;
+}
