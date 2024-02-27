@@ -30,6 +30,9 @@
     </div>
 
     <main>
+      <!-- GRADIENT BACKGROUND -->
+      <canvas id="gradient-canvas"></canvas>
+
       <!-- HERO SECTION -->
       <div class="hero">
         <div class="section-container two-column">
@@ -330,7 +333,11 @@
               <div class="swipe-sessions-card">
                 <!-- card-top-elements -->
                 <div class="card-top">
-                  <img src="assets/swipe-sessions.png" alt="Swipw Sessions" />
+                  <img
+                    src="assets/swipe-sessions.png"
+                    alt="Swipw Sessions"
+                    id="sessions-logo"
+                  />
                   <div class="avatars">
                     <img src="assets/avatar1.png" alt="Avatar-1" />
                     <img src="assets/avatar2.png" alt="Avatar-2" />
@@ -350,6 +357,116 @@
           </div>
         </div>
       </div>
+
+      <!-- GETTING STARTED SECTION -->
+      <div class="getting-started-section">
+        <div class="section-container two-column">
+          <!-- left -->
+          <div class="col-left">
+            <h2>What are you waiting for?</h2>
+            <p>
+              Explore <a href="#swipe">Swipe</a>now, or create an account and
+              start accepting payments today! If you need custom package for
+              your business, let's chat today.
+            </p>
+            <button class="primary-button with-icon">
+              Start now
+              <img src="assets/arrow-right-light.svg" alt="" />
+            </button>
+          </div>
+
+          <!-- right -->
+          <div class="col-right">
+            <!-- card-1 -->
+            <div class="card">
+              <img src="assets/shield-icon.png" alt="" class="icon" />
+              <h3>Always know what you pay</h3>
+              <p class="secondary-text">
+                Integrated per-transaction pricing with no hidden fees.
+              </p>
+
+              <button class="secondary-button with-icon">
+                Pricing details
+                <img src="assets/arrow-right-purple.svg" alt="" />
+              </button>
+            </div>
+
+            <!-- card-2 -->
+            <div class="card">
+              <img src="assets/bars-icon.png" alt="" class="icon" />
+              <h3>Start your integration</h3>
+              <p class="secondary-text">
+                Get up and running with Stripe in as little as 10 minutes.
+              </p>
+
+              <button class="secondary-button with-icon">
+                API referance
+                <img src="assets/arrow-right-purple.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER SECTION -->
+      <footer class="footer">
+        <div class="section-container">
+          <!-- column-1 -->
+          <div class="col">
+            <img src="assets/logo-dark.svg" alt="" id="footer-logo" />
+            <div class="icon-link">
+              <img src="assets/location-icon.png" alt="" />
+              <a href="#">United States</a>
+            </div>
+            <div class="icon-link">
+              <img src="assets/comment-icon.png" alt="" />
+              <a href="#">English (United States)</a>
+            </div>
+          </div>
+
+          <!-- column-2 -->
+          <div class="col">
+            <h3>Products</h3>
+            <ul>
+              <li><a href="#atlas">Atlas</a></li>
+              <li><a href="#billing">Billing</a></li>
+              <li><a href="#invoiceing">Invoiceing</a></li>
+              <li><a href="#payments">Payments</a></li>
+              <li><a href="#checkout">Checkout</a></li>
+              <li><a href="#identity">Identity</a></li>
+            </ul>
+          </div>
+
+          <!-- column-3 -->
+          <div class="col">
+            <h3>Use Cases</h3>
+            <ul>
+              <li><a href="#ecommerce">eCommerce</a></li>
+              <li><a href="#saas">SaaS</a></li>
+              <li><a href="#marketplace">Marketplace</a></li>
+              <li><a href="#embedded-finance">Embedded Finance</a></li>
+              <li><a href="#crypto">Crypto</a></li>
+              <li><a href="#creator-economy">Creator Economy</a></li>
+            </ul>
+          </div>
+
+          <!-- column-4 -->
+          <div class="col">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#support-center">Support Center</a></li>
+              <li><a href="#guides">Guides</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#licenses">Licenses</a></li>
+              <li><a href="#privacy">Privacy & Terms</a></li>
+              <li><a href="#cookie">Cookie Settings</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </main>
+
+    <!-- JAVASCRIPT FILE -->
+    <script src="gradient.js"></script>
   </body>
 </html>
