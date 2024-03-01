@@ -1082,6 +1082,14 @@ main {
     padding: var(--spacing-md) 0;
   }
 
+  /* GRAPHIC GRID SECTION */
+  #credit-card,
+  #slack-invoice,
+  #phone,
+  #dash {
+    border-radius: 10px;
+  }
+
   /* INTEGRATION SECTION */
   .integrations-section {
     padding: var(--spacing-xl) 0;
