@@ -18,7 +18,7 @@
 |     14     |  Grid Protfolio Project  |     [Link](https://css-grid-protfolio.netlify.app/)      | [Link](https://github.com/Mr-Anik1/HTML-CSS/tree/master/css/Instructor-colt/1.Projects/5.Grid_Protfolio_Project)  |
 |     15     |      Swipe Project       |      [Link](https://css-swipe-project.netlify.app/)      |          [Link](https://github.com/Mr-Anik1/HTML-CSS/tree/master/css/Instructor-colt/1.Projects/6.Swipe)          |
 |     16     | Pirates Admin Dashboard  | [Link](https://css-pirates-admin-dashboard.netlify.app/) |       [Link](https://github.com/Mr-Anik1/HTML-CSS/tree/master/simple_projects/1.Responsive_Admin_Dashboard)       |
-|     ..     |          ......          |                         ........                         |                                                     ........                                                      |
+|     17     |     Results Summary      |     [Link](https://css-results-summary.netlify.app/)     |       [Link](https://github.com/Mr-Anik1/HTML-CSS/tree/master/simple_projects/2.Results_Summary_Component)        |
 |     ..     |          ......          |                         ........                         |                                                     ........                                                      |
 |     ..     |          ......          |                         ........                         |                                                     ........                                                      |
 |     ..     |          ......          |                         ........                         |                                                     ........                                                      |
