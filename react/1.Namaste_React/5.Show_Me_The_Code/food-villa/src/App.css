@@ -15,7 +15,7 @@
 
 .nav-list {
   display: flex;
-  gap: 20px;
+  gap: 1.4rem;
 }
 
 .nav-list a {
@@ -34,14 +34,15 @@
   width: 220px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   margin: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
@@ -151,13 +152,50 @@
 
 /* Footer */
 .footer-component {
+  position: absolute;
   background-color: #333;
   color: #fff;
   padding: 1rem;
   text-align: center;
   box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+/* || MEDIA QUERY || */
+@media only screen and (max-width: 600px) {
+  .search-bar input[type="text"] {
+    padding: 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  .search-bar button {
+    padding: 0.7rem 1rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .body-component {
+    margin: 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 368px) {
+  .search-bar input[type="text"] {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+  }
+
+  .search-bar button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .nav-list {
+    gap: 0.5rem;
+  }
 }

@@ -5,5 +5,8 @@
 }
 
 body {
-  height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 3rem; /* Adjust as necessary to prevent content from being hidden */
+  min-height: 100vh;
 }
