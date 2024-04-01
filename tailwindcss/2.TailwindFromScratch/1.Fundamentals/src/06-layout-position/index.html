@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>TailwindCSS</title>
+  </head>
+  <body>
+    <!-- Positioning -->
+    <div class="relative h-40 w-1/2 bg-red-500 text-2xl">
+      <p>Parent Elements</p>
+      <div class="absolute bottom-0 right-0 bg-green-500 p-2">
+        absolute child bottom-0 right-0
+      </div>
+
+      <div class="absolute right-0 top-0 bg-purple-500 p-2">
+        absolute child top-0 right-0
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Top left corner -->
+    <div class="relative h-32 w-1/2 bg-stone-500 text-2xl text-white">
+      <div class="absolute left-0 top-0 bg-red-500 p-2">Top Left</div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Top right corner -->
+    <div class="relative h-32 w-1/2 bg-stone-500 text-2xl text-white">
+      <div class="absolute right-0 top-0 bg-red-500 p-2">Top right</div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Bottom left corner -->
+    <div class="relative h-32 w-1/2 bg-stone-500 text-2xl text-white">
+      <div class="absolute bottom-0 left-0 bg-red-500 p-2">Bottom left</div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Bottom right corner -->
+    <div class="relative h-32 w-1/2 bg-stone-500 text-2xl text-white">
+      <div class="absolute bottom-0 right-0 bg-red-500 p-2">Bottom right</div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Span top edge -->
+    <div class="relative h-40 w-1/2 bg-slate-400 text-2xl text-white">
+      <div class="absolute inset-x-0 top-0 h-12 bg-blue-600 p-2">
+        Span top edge
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Span left edge -->
+    <div class="relative h-40 w-1/2 bg-slate-400 text-2xl text-white">
+      <div class="absolute inset-y-0 left-0 w-20 bg-blue-600 p-2">
+        Span top edge
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Span right edge -->
+    <div class="relative h-40 w-1/2 bg-slate-400 text-2xl text-white">
+      <div class="absolute inset-y-0 right-0 w-20 bg-blue-600 p-2">
+        Span top edge
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Span bottom edge -->
+    <div class="relative h-40 w-1/2 bg-slate-400 text-2xl text-white">
+      <div class="absolute inset-x-0 bottom-0 h-16 bg-blue-600 p-2">
+        Span top edge
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Display Classes -->
+    <div class="text-2xl">
+      Lorem ipsum <span class="inline font-bold">This is inline</span> dolor sit
+      amet, consectetur adipisicing elit. Explicabo repellendus, odio commodi
+      impedit, sed deleniti necessitatibus ab pariatur laboriosam nam omnis
+      <span class="inline-block font-bold">This is inline block</span> quam
+      tempora vitae autem officiis aspernatur veniam corrupti similique! Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Odio doloribus
+      consequuntur dolor ab rem nesciunt et, vero minima
+      <span class="block font-bold">This is block element</span> expedita
+      eligendi eum? Atque quod corrupti doloremque, distinctio commodi veritatis
+      quam iure? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+      alias assumenda. Hidden Start
+      <span class="hidden font-bold">This is display none </span> Hidden End
+      Itaque in vel porro incidunt omnis suscipit aperiam, sint obcaecati atque
+      aliquid alias reiciendis maxime qui voluptatem placeat? Fugiat?
+    </div>
+
+    <br /><br /><br />
+    <!-- Z-Index -->
+    <div class="relative h-36 text-3xl">
+      <div class="absolute left-10 z-30 h-32 w-32 bg-blue-300">1</div>
+      <div class="absolute left-20 h-32 w-32 bg-blue-400">2</div>
+      <div class="absolute left-40 h-32 w-32 bg-blue-500">3</div>
+      <div class="absolute left-60 z-10 h-32 w-32 bg-blue-600">4</div>
+      <div class="absolute left-80 h-32 w-32 bg-blue-700">5</div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Floats Left -->
+    <div class="w-1/2 text-2xl">
+      <img
+        class="float-left mr-2 h-28 w-36"
+        src="../assets/img/img1.jpg"
+        alt=""
+      />
+      <p>
+        FLOAT LEFT dolor sit amet consectetur adipisicing elit. Recusandae
+        aliquid, modi quae ducimus iste inventore animi numquam! Veritatis nemo
+        delectus suscipit hic perferendis quam! Itaque cumque delectus officiis
+        beatae est cum velit, laboriosam debitis eligendi recusandae fuga
+        deleniti facere. Repudiandae alias incidunt architecto quis, laudantium
+        distinctio saepe vel fuga repellendus?
+      </p>
+    </div>
+
+    <!-- Floats Right -->
+    <br />
+    <br />
+    <div class="w-1/2 text-2xl">
+      <img
+        class="float-right ml-2 h-28 w-36"
+        src="../assets/img/img1.jpg"
+        alt=""
+      />
+      <p>
+        FLOAT RIGHT dolor sit amet consectetur adipisicing elit. Recusandae
+        aliquid, modi quae ducimus iste inventore animi numquam! Veritatis nemo
+        delectus suscipit hic perferendis quam! Itaque cumque delectus officiis
+        beatae est cum velit, laboriosam debitis eligendi recusandae fuga
+        deleniti facere. Repudiandae alias incidunt architecto quis, laudantium
+        distinctio saepe vel fuga repellendus?
+      </p>
+    </div>
+  </body>
+</html>
+
+<!-- Position Classes
+      static	    position: static;
+      fixed	      position: fixed;
+      absolute	  position: absolute;
+      relative	  position: relative;
+      sticky	    position: sticky;
+    -->
+
+<!-- Display Classes
+      block	            display: block;
+      inline-block	    display: inline-block;
+      inline	          display: inline;
+      flex	            display: flex;
+      inline-flex	      display: inline-flex;
+      table	            display: table;
+      grid	            display: grid;
+      inline-grid	      display: inline-grid;
+      contents	        display: contents;
+      list-item	        display: list-item;
+      hidden	          display: none;
+    -->
+
+<!-- Z-Index
+      z-0	    z-index: 0;
+      z-10	  z-index: 10;
+      z-20	  z-index: 20;
+      z-30	  z-index: 30;
+      z-40	  z-index: 40;
+      z-50	  z-index: 50;
+      z-auto	z-index: auto;
+    -->
+
+<!-- Float
+      float-right	  float: right;
+      float-left	  float: left;
+      float-none	  float: none;
+    -->
