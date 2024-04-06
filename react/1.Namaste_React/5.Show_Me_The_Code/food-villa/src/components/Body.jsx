@@ -1,30 +1,47 @@
 import { useState } from "react";
 import restaurantList from "../data/fakeData";
+import { filteredRating, filteredSearch } from "./FilteredData";
+import RatingSearch from "./RatingSearch";
 import RestaurantCard from "./RestaurantCard";
-import { filterData, Search } from "./Search";
+import Search from "./Search";
 
+// Body Component
 const Body = () => {
   const [restaurants, setRestaurants] = useState(restaurantList);
+  const [filteredRestaurant, setFilteredRestaurant] = useState(restaurantList);
 
   const handleSearch = (searchText) => {
     // Need to filter the data
-    const searchedData = filterData({
+    const searchedData = filteredSearch({
       searchText,
-      restaurants: restaurantList,
+      restaurants,
     });
-    // Update the state - restaurants
-    setRestaurants(searchedData);
+    // Update the state - filteredRestaurant
+    setFilteredRestaurant(searchedData);
+  };
+
+  const handleRatingSearch = (rating) => {
+    // Filtered restaurants by using ratings.
+    const ratingData = filteredRating({ rating, restaurants: restaurantList });
+    // Update states
+    setRestaurants(ratingData);
+    setFilteredRestaurant(ratingData);
   };
 
   return (
     <>
       <div className="body-component">
-        {/* Search Bar */}
-        <Search handleSearch={handleSearch} />
+        <div className="top-body">
+          {/* Filtered By Rating */}
+          <RatingSearch handleRatingSearch={handleRatingSearch} />
+
+          {/* Search Bar */}
+          <Search handleSearch={handleSearch} />
+        </div>
 
         {/* Restaurant Card */}
         <div className="restaurant-list">
-          {restaurants.map((restaurant) => (
+          {filteredRestaurant.map((restaurant) => (
             <RestaurantCard key={restaurant?.data?.id} resData={restaurant} />
           ))}
         </div>

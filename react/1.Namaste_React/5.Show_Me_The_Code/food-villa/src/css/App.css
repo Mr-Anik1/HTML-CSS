@@ -1,3 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 3rem; /* Adjust as necessary to prevent content from being hidden */
+  min-height: 100vh;
+}
+
 /* NavBar Design */
 .navbar {
   display: flex;
@@ -95,19 +108,48 @@
   flex-direction: column;
 }
 
+/* Top of the body */
+.top-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Rating Search */
+.select-rating {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  border: 2px solid #0dcf85;
+  border-radius: 5px;
+  width: 4rem;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.select-rating:hover,
+.select-rating:focus {
+  border-color: #944ae9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Search Bar */
 .search-bar {
   display: flex;
   align-items: center;
-  margin-left: auto; /* Push search bar to the right */
   gap: 0.2rem;
-  max-width: 80%;
+  /* margin-left: auto; // Push search bar to the right
+  max-width: 80%; */
 }
 
 .search-bar input[type="text"] {
   flex: 1;
   padding: 1rem;
-  border: 2px solid #944ae9;
+  border: 2px solid #0dcf85;
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: bold;
@@ -116,12 +158,12 @@
 }
 
 .search-bar input[type="text"]:hover {
-  border: 2px solid #0dcf85;
+  border: 2px solid #8706ff;
 }
 
 .search-bar button {
   padding: 1rem 2rem;
-  background-color: #8706ff;
+  background-color: #0dcf85;
   color: #ffffff;
   border: none;
   border-radius: 2rem;
@@ -132,7 +174,7 @@
 }
 
 .search-bar button:hover {
-  background-color: #0dcf85;
+  background-color: #944ae9;
   /* color: #ffc107; */
 }
 
@@ -165,6 +207,12 @@
 
 /* || MEDIA QUERY || */
 @media only screen and (max-width: 600px) {
+  /* Rating */
+  .select-rating {
+    font-size: 0.7rem;
+  }
+
+  /* Search Bar */
   .search-bar input[type="text"] {
     padding: 0.7rem;
     font-size: 0.7rem;
@@ -183,6 +231,14 @@
 }
 
 @media only screen and (max-width: 368px) {
+  /* Rating */
+  .select-rating {
+    font-size: 0.5rem;
+    padding: 0.3rem;
+    width: 3rem;
+  }
+
+  /* Search Bar */
   .search-bar input[type="text"] {
     padding: 0.5rem;
     font-size: 0.5rem;

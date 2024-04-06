@@ -1,10 +1,12 @@
 import React from "react";
+import ReactDOM from "react-dom/client";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./css/App.css";
 
-function App() {
+// Final AppLayout
+function AppLayout() {
   return (
     <>
       <Header />
@@ -14,4 +16,5 @@ function App() {
   );
 }
 
-export default App;
+// Render the AppLayout
+ReactDOM.createRoot(document.getElementById("root")).render(<AppLayout />);
