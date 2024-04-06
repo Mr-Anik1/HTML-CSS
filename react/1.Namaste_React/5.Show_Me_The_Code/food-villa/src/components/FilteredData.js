@@ -5,7 +5,7 @@ export const filteredRating = ({ rating, restaurants }) => {
   }
 
   const data = restaurants.filter((restaurant) => {
-    return restaurant.data?.avgRating >= +rating;
+    return restaurant.info?.avgRating >= +rating;
   });
 
   return data;
@@ -14,7 +14,7 @@ export const filteredRating = ({ rating, restaurants }) => {
 // Filter Search Text
 export const filteredSearch = ({ searchText, restaurants }) => {
   const data = restaurants.filter((restaurant) => {
-    return restaurant.data?.name
+    return restaurant.info?.name
       .toLowerCase()
       .includes(searchText.trim().toLowerCase());
   });
