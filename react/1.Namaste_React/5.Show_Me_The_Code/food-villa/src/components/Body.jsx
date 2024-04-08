@@ -4,6 +4,7 @@ import { filteredRating, filteredSearch } from "./FilteredData";
 import RatingSearch from "./RatingSearch";
 import RestaurantCard from "./RestaurantCard";
 import Search from "./Search";
+import Shimmer from "./Shimmer";
 
 // Body Component
 const Body = () => {
@@ -14,7 +15,7 @@ const Body = () => {
 
   // Handle Function
   const handleSearch = (searchText) => {
-    // Need to filter the data
+    // Need to filter the search data
     const searchedData = filteredSearch({
       searchText,
       restaurants: ratingRestaurants,
@@ -69,7 +70,9 @@ const Body = () => {
     fetchData();
   }, []);
 
-  return (
+  return allRestaurants?.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="body-component">
         <div className="top-body">
