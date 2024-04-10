@@ -79,3 +79,24 @@ We need virtual DOM for reconcliation(algorithm) React.
 #### What is React fiber?
 
 Reconcliation Engine(DIFF)
+
+<!-- Class 6 -->
+
+### Exploring the world class 6
+
+1.Page loads -> API call(500ms) -> Render
+2.Page loads -> Render -> API call(500ms) -> Render
+react follows 2nd approch for better user experice.
+useEffect() has been called after the component rendered.
+
+when setBtnNameReact() is called, it is updating the btnNameReact value and it is render the header component once again.Now this btnNameReact is new variable than it was before. It will find the deef between older version and the newer version and it will see only button has updated.
+
+** Important **
+e.target.value when I press a key, it updates the local state variable searchText. And must be remembared, when local state variable is update that time our component is re-rendared. That means when I press every single key on the search box, every time our component is rendered.
+
+--> Whenever you changed the local state variable react re-rendred the component.
+->> Whenever state variable update, react reconciliation cycle(re-renders the component)
+
+#### Why react is too fast?
+
+- React fiber is new reconciliation algorithm, which find different between two virtual dom and update only the portion is required.

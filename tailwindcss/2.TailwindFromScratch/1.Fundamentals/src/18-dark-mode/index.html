@@ -6,9 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Dark Mode</title>
+
+    <!-- CUSTOM CSS FOR TOGGLE -->
+    <style>
+      .toggle-checkbox:checked {
+        right: 0;
+        border-color: #68d391;
+      }
+
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #68d391;
+      }
+    </style>
   </head>
   <body>
-    <!-- By default, you can have your project use whatever mode your OS is using. You can use "dark:{class}". You can also set your config to use a class instead of using your OS mode -->
+    <div class="mt-12 flex justify-center">
+      <div
+        class="container w-2/3 rounded-xl bg-stone-50 px-6 py-8 shadow-xl shadow-slate-200 dark:bg-slate-900 dark:shadow-sky-300"
+      >
+        <h3 class="text-3xl font-medium text-slate-900 dark:text-white">
+          Lorem ipsum dolor sit.
+        </h3>
+        <p class="mt-2 text-xl text-green-600 dark:text-slate-400">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+          accusamus voluptas fugiat repellat voluptatem excepturi laborum
+          exercitationem incidunt odio repellendus. Deleniti ducimus velit,
+          placeat facere odit incidunt numquam ipsum accusamus.
+        </p>
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <!-- Toggle Dark Mode -->
+    <div
+      class="relative ml-6 mr-2 inline-block w-16 select-none align-middle transition duration-300 ease-in"
+    >
+      <input
+        type="checkbox"
+        name="toggle"
+        id="toggle"
+        class="toggle-checkbox absolute block h-8 w-8 cursor-pointer appearance-none rounded-full border-4 bg-white"
+      />
+      <label
+        for="toggle"
+        class="toggle-label block h-8 cursor-pointer overflow-hidden rounded-full bg-gray-300"
+      ></label>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document.getElementById("toggle").addEventListener("change", function () {
+        if (this.checked) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      });
+    </script>
   </body>
 </html>
 

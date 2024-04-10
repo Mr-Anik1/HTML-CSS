@@ -6,11 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Animation</title>
+
+    <!-- || HAND MADE ANIMATION || -->
+    <!-- <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              wiggle: "wiggle 1s ease-in-out infinite",
+            },
+            Keyframes: {
+              wiggle: {
+                "0%, 100%": {
+                  transform: "rotate(-12deg)",
+                },
+                "50%": {
+                  transform: "rotate(12deg)",
+                },
+              },
+            },
+          },
+        },
+      };
+    </script> -->
   </head>
   <body>
     <div class="flex min-h-screen items-center justify-center bg-slate-900">
       <svg
-        class="w-48 text-white"
+        class="w-48 animate-spin text-white"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
