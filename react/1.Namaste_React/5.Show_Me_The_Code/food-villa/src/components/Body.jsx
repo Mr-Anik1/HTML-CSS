@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { SWIGGY_API } from "../utils/constants";
 import { filteredRating, filteredSearch } from "./FilteredData";
 import RatingSearch from "./RatingSearch";
@@ -86,7 +87,14 @@ const Body = () => {
         {/* Restaurant Card */}
         <div className="restaurant-list">
           {filteredRestaurant.map((restaurant) => (
-            <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+            // key should be in the parent jsx; here the link is the parent of <RestaurantCard/>.
+            <Link
+              key={restaurant?.info?.id}
+              to={`/restaurants/${restaurant?.info?.id}`}
+              className="restaurant-card-link"
+            >
+              <RestaurantCard resData={restaurant} />
+            </Link>
           ))}
         </div>
       </div>

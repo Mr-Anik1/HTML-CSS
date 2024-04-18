@@ -5,10 +5,13 @@ const CDN_URL =
 const SWIGGY_API =
   "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING";
 
-export { CDN_URL, SWIGGY_API };
+const MENU_API =
+  "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId=";
+
+export { CDN_URL, MENU_API, SWIGGY_API };
 
 /**
- * @More_API
+ * @Swiggy_API
  * 
  * 
  * 
@@ -23,14 +26,80 @@ export { CDN_URL, SWIGGY_API };
   "https://corsproxy.io/?https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=12.9351929&lng=77.62448069999999&carousel=true&third_party_vendor=1"
 
   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants; 
-
-
-  // 16
-  "https://corsproxy.io/?https://www.swiggy.com/mapi/homepage/getCards?lat=12.9351929&lng=77.62448069999999#"
-
-  json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
-
+  
  *
- *
+ *  
  * 
+ * 
+ * 
+ * --||--------------||||-------------|||----------||--
+ *  
+ * 
+ * 
+ *@MenuAPI (New)
+ *
+ * https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId=
+ * 
+ * json?.data?.cards[2]?.card?.card?.info
+ * 
+ * 
+ * 
+ * example resId=735634
+ * 
+ * @DelivaryTime slaString
+ * const {sla:{slaString}}=json?.data?.cards[2]?.card?.card?.info
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @Another_One (old)
+  https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=
+ * 
+ * json?.data?.cards[2]?.card?.card?.info
+ *  
+ * 
+ * 
+ * example resId
+ * kfc resId=26723(best)
+ * 818652
+ * 229(mgehna food)
+ * 
+ * 
+ * @DelivaryTime
+ * const {nearestOutletNudge} = json?.data?.cards[2]?.card?.card?.info
+ * 
+ * const delivaryTime = nearestOutletNudge?.nearestOutletInfo?.siblingOutlet?.sla?.slaString
+ * 
+ * 
+ * 
+ * 
+ * 
+ * @Menu_Details
+ * 
+ * // Here we will find an array of cards.
+ * arrayCards = json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+ * 
+ * // If we expand 3 number cards, here we will find items of cards.
+ * arrayCards[2]?.card?.card?.itemCards
+ * 
+ * Now we can use map those itemCards and will be found single itemCard 
+ * itemCards[0]?.card?.info
+ * itemCards[1]?.card?.info
+ * itemCards[2]?.card?.info
+ * 
+ * inside info we will find card details like name,category, description and so on.
+ * 
+ * 
+ * 
+ 
+ *  
  */
+
+// https://www.swiggy.com/restaurants/kfc-sector-3-rohini-delhi-26723

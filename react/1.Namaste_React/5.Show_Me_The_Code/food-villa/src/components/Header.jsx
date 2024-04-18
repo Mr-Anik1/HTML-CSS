@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Header = () => {
@@ -13,15 +14,28 @@ const Header = () => {
       {/* NavBar */}
       <div className="navbar">
         <div className="logo">
-          <a href="#home">
+          <Link to="/">
             <img src={logo} alt="logo" />
-          </a>
+          </Link>
         </div>
+
         <div className="nav-list">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <a href="#cart">Cart</a>
+          <p>
+            <Link className="link" to="/">
+              Home
+            </Link>
+          </p>
+          <p>
+            <Link className="link" to="/about">
+              About
+            </Link>
+          </p>
+          <p>
+            <Link className="link" to="/contact">
+              Contact
+            </Link>
+          </p>
+          <p className="link">Cart</p>
           <button className="login-btn" onClick={handleBtnClick}>
             {btnName}
           </button>

@@ -100,3 +100,144 @@ e.target.value when I press a key, it updates the local state variable searchTex
 #### Why react is too fast?
 
 - React fiber is new reconciliation algorithm, which find different between two virtual dom and update only the portion is required.
+
+## Episod 7
+
+dependencies argument of useEffect(callback, dependencies) lets you control when the side-effect runs. [If dependencies are:](https://dmitripavlutin.com/react-useeffect-explanation/ "useEffect Explanation")
+
+**A) Not provided: the side-effect runs after every rendering.**
+
+```
+import { useEffect } from 'react';
+
+function MyComponent() {
+  useEffect(() => {
+    // Runs after EVERY rendering
+  });
+}
+```
+
+**B) An empty array []: the side-effect runs once after the initial rendering.**
+
+```
+import { useEffect } from 'react';
+
+function MyComponent() {
+  useEffect(() => {
+    // Runs ONCE after initial rendering
+  }, []);
+}
+```
+
+**C) Has props or state values [prop1, prop2, ..., state1, state2]: the side-effect runs once after initial rendering and then only when any dependency value changes.**
+
+```
+import { useEffect, useState } from 'react';
+
+function MyComponent({ prop }) {
+  const [state, setState] = useState('');
+  useEffect(() => {
+    // Runs ONCE after initial rendering
+    // and after every rendering ONLY IF `prop` or `state` changes
+  }, [prop, state]);
+}
+```
+
+Never use "a" tag in React, so I have to update the Header Componet. Insted use of "a" we can use "Link".
+Link component help us navigate one page to another page without refresh.
+
+There are two types of routing in our web application.
+
+- Client side routing
+- Server side routing
+
+React is single page, here its have one page and only component is interchange via client side routing.
+
+## Episod 8
+
+Whenever a class component is instantiated (loaded), at first the constructor is called, then render is called.
+
+- First constructor is called,
+- Render method is called,
+- componentDidMount() is called.
+
+componentDidMount() is used to make an API call. It's like the useEffect() hook.
+
+```
+load -> render(dummy data) -> API call [ componentDidMount() ] -> render(new API data)
+```
+
+React has two phase:
+
+- Render phase
+- Commit Phase:
+  - React update the DOM and refs
+  - componentDidMount()
+
+### React component lifecycle:
+
+------------ MOUNTING ------------
+
+- Render phase:
+
+  - Constructor(Dummy Data)
+  - Render(Dummy Data)
+
+- Commit Phase:
+  - React update the DOM with dummy data
+  - ComponentDidMount() is called
+  - API call
+
+------------ UPDATING -------------
+
+- Render phase:
+
+  - this.setState() -> update the state variable with API data
+  - Render(API Data)
+
+- Commit Phase:
+  - React update the DOM with new API data
+  - componentDidUpdate()
+
+### Where we use componentWillUnmount()?
+
+In componentDidMount(), if we use a setIntervel() function and set a 1s timer, then every 1 second, setIntervel() will call. If we navigate from one page to another (component), the setInterval() will not stop. If we go to the page again where we used setInterval(), at that moment, two setInterval() will run without our permission, and this is a big problem in the Singel Page Application. In a single-page application, we don't refresh the page; we are only changing the component.
+
+To avoid this problem, we will need to set clearInterval(). And where do we set the celarInterval()? Yes, we set clearInterval() in the componentWillUnmount(). Because when we navigate from one page to another (component), the componentWillUnmount() will call. So, when componentWillUnmount() will call that time, our clearInterval() will also call and clear the interval. And this way, clearInterval() will work perfectly.
+
+**_setInterval in the componentDidMount()_**
+
+```
+componentDidMount(){
+  this.timer = setInterval(()=>{
+    console.log("Timer is set");
+  },1000)
+}
+```
+
+**_When we nevigate the page clear the interval_**
+
+```
+componentWillUnmount(){
+  clearInterval(this.timer);
+}
+```
+
+### In the functional component, we can use setInterval() and clearInterval() in an easy way.
+
+```
+useEffect(()=>{
+  //setInterval() has been stored in the timer variable, and it is run every 1 second.
+  const timer = setInterval(()=>{
+    console.log("Timer is set");
+  },1000)
+
+
+  //clear the interval (timer) when we leave the page.(unMounting phage)
+  return ()=>{
+    clearInterval(timer)
+  }
+},[])
+```
+
+After we leave the page, the return() function will be called, and it will clear the interval.
