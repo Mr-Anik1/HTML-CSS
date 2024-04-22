@@ -363,7 +363,7 @@ body {
   border: none;
   border-radius: 1rem;
   background-color: #f4f5f4;
-  box-shadow: 0 4px 8px rgba(100, 177, 166, 0.25);
+  box-shadow: 0 4px 8px rgba(59, 66, 66, 0.26);
   margin: 1.5rem;
   padding: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;

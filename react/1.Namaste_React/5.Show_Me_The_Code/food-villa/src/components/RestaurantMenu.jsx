@@ -1,25 +1,14 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { CDN_URL, MENU_API } from "../utils/constants";
+import { CDN_URL } from "../utils/constants";
+import { useRestaurantMenu } from "../utils/useRestaurantMenu";
 import MenuItemCard from "./MenuItemCard";
 import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
-
   const { resId } = useParams();
 
-  const fetchMenu = async () => {
-    const data = await fetch(MENU_API + resId);
-    const json = await data.json();
-
-    // Update the state with restaurant data
-    setResInfo(json?.data);
-  };
-
-  useEffect(() => {
-    fetchMenu();
-  }, []);
+  // Here I use custom hook useRestaurantMenu for fetch Data.
+  const resInfo = useRestaurantMenu(resId);
 
   // When data is not loading.
   if (resInfo === null) {

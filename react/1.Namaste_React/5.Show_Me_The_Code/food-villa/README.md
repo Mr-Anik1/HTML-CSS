@@ -241,3 +241,46 @@ useEffect(()=>{
 ```
 
 After we leave the page, the return() function will be called, and it will clear the interval.
+
+## Episod 9 Optimize Our App
+
+chunking |
+code spliting | ------> Lazy Loading
+dynamic bundling | ------> On Demand Loading
+
+I can use lazy loading when my application will big, this way I can split my app in many JavaScript file. My app will be lightweight and fast for using lazy loading.
+
+```
+import {lazy, Suspense} from "react";
+
+// lazy takes a callback function and its have a import() function which takes Grocery path.
+
+const Grocery = lazy(()=>import("../components/Grocery"))
+```
+
+Suspense is a component which give us react. It's solves lazy loading synchronus problem. when we split a component we have to wrap this component with the "Suspense" component. like this <Suspense><Grocery/><Suspense/> and "Suspense" must have a fallback={}, when component is not exist or is not loading yet, then fallback is shown our UI.
+
+Here we split <Grocery/> component, so that we wrap up this with <Suspense> component.
+
+```
+const appRouter=createBrowserRouter([
+{
+path:"/eza"
+element:<Example/>
+children:[
+// other children path
+    {
+      path:"/grocery",
+      element:(<Suspense fallback={<Shimmer/>}><Grocery/><Suspense/>) // wrap with <Suspense/> component.
+    }
+  ]
+errorElement:<Error/>
+}
+])
+```
+
+# Must Be Remember, you should use named export insted of default export in React components.
+
+```
+Could not Fast Refresh ("default" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react-swc#consistent-components-exports
+```

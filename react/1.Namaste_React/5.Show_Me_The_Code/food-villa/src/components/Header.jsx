@@ -35,6 +35,11 @@ const Header = () => {
               Contact
             </Link>
           </p>
+          <p>
+            <Link className="link" to="/grocery">
+              Grocery
+            </Link>
+          </p>
           <p className="link">Cart</p>
           <button className="login-btn" onClick={handleBtnClick}>
             {btnName}
