@@ -1,6 +1,6 @@
 import { CDN_URL } from "../utils/constants";
 
-const RestaurantCard = (props) => {
+export const RestaurantCard = (props) => {
   const { resData } = props;
 
   // Destructuring Each Restaurant
@@ -32,4 +32,24 @@ const RestaurantCard = (props) => {
   );
 };
 
-export default RestaurantCard;
+/**
+ * @Higher_Order_Component
+ *   - Accept function(component) as a argument
+ *   - Return function(component)
+ *
+ * Here this higher order component accept <RestaurantCard/> component as argument and return another component.
+ *
+ */
+export const withPromotedLabel = (RestaurantCard) => {
+  // It returns a component who is accept props.
+  return (props) => {
+    return (
+      <>
+        <div>
+          <label>Promoted</label>
+          <RestaurantCard {...props} />
+        </div>
+      </>
+    );
+  };
+};

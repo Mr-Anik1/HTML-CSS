@@ -23,7 +23,7 @@ export { CDN_URL, MENU_API, SWIGGY_API };
 
 
   // 20
-  "https://corsproxy.io/?https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=12.9351929&lng=77.62448069999999&carousel=true&third_party_vendor=1"
+  "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=28.7040592&lng=77.10249019999999&carousel=true&third_party_vendor=1#"
 
   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants; 
   

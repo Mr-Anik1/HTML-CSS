@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SWIGGY_API } from "../utils/constants";
 import { filteredRating, filteredSearch } from "./FilteredData";
 import RatingSearch from "./RatingSearch";
-import RestaurantCard from "./RestaurantCard";
+import { RestaurantCard, withPromotedLabel } from "./RestaurantCard";
 import Search from "./Search";
 import Shimmer from "./Shimmer";
 
@@ -13,6 +13,9 @@ const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [ratingRestaurants, setRatingRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+
+  // When a restaurant has promoted label, we have to create RestaurantCardPromoted card.
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   // Handle Function
   const handleSearch = (searchText) => {
@@ -93,7 +96,12 @@ const Body = () => {
               to={`/restaurants/${restaurant?.info?.id}`}
               className="restaurant-card-link"
             >
-              <RestaurantCard resData={restaurant} />
+              {/* If the restaurant is promoted then return RestaurantCardPromoted otherwise return RestaurantCard */}
+              {restaurant?.info?.promoted ? (
+                <RestaurantCardPromoted resData={restaurant} />
+              ) : (
+                <RestaurantCard resData={restaurant} />
+              )}
             </Link>
           ))}
         </div>

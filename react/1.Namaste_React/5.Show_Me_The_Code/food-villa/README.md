@@ -284,3 +284,5 @@ errorElement:<Error/>
 ```
 Could not Fast Refresh ("default" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react-swc#consistent-components-exports
 ```
+
+# Episod-11 Here we learn Higher Order Component.
