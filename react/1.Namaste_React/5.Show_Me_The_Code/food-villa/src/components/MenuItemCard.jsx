@@ -14,9 +14,7 @@ const MenuItemCard = ({ item, dummyImage }) => {
         {/* Left */}
         <div className="menu-card-left">
           <h2 className="menu-name">{name}</h2>
-          <h3 className="menu-price">
-            ₹{price / 100 || defaultPrice / 100 || ""}
-          </h3>
+          <h3 className="menu-price">₹{price / 100 || ""}</h3>
           <h4 className="menu-description">{description}</h4>
         </div>
 

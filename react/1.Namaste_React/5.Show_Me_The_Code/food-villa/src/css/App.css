@@ -136,6 +136,13 @@ body {
   text-decoration: none;
 }
 
+.promoted-label {
+  position: absolute;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 10px;
+}
+
 /* Body Component */
 .body-component {
   margin: 1rem 3rem;

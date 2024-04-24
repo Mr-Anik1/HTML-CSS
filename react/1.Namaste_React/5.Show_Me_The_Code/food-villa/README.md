@@ -286,3 +286,10 @@ Could not Fast Refresh ("default" export is incompatible). Learn more at https:/
 ```
 
 # Episod-11 Here we learn Higher Order Component.
+
+A React application has two layers:
+
+- UI Layer
+- Data Layer
+
+UI layer is powered by Data layer.

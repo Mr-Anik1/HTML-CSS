@@ -44,7 +44,7 @@ export { CDN_URL, MENU_API, SWIGGY_API };
  * 
  * 
  * 
- * example resId=735634
+ * example resId=819617
  * 
  * @DelivaryTime slaString
  * const {sla:{slaString}}=json?.data?.cards[2]?.card?.card?.info
