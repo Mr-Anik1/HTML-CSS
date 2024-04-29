@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { CDN_URL } from "../utils/constants";
 import { useRestaurantMenu } from "../utils/useRestaurantMenu";
-import MenuItemCard from "./MenuItemCard";
+import { RegularCategoriesItemCards, RegularItemCards } from "./RegularCards";
 import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
@@ -28,8 +28,12 @@ const RestaurantMenu = () => {
   } = resInfo?.cards[2]?.card?.card?.info;
 
   // Base Card
-  const baseCard =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.slice(1, -2);
+  const baseRegularCards =
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.slice(
+      1,
+      -2
+    ) ||
+    resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.slice(1, -2);
 
   return (
     <>
@@ -53,43 +57,19 @@ const RestaurantMenu = () => {
           <img src={CDN_URL + cloudinaryImageId} alt={name} />
         </div>
 
-        {baseCard.map((regularCard) =>
+        {baseRegularCards?.map((regularCard) =>
           regularCard?.card?.card?.itemCards ? (
-            <div className="menu-main">
-              <h2 className="menu-items">
-                {regularCard?.card?.card?.title}{" "}
-                {regularCard?.card?.card?.itemCards.length} items
-              </h2>
-
-              <div className="menu-main-card-container">
-                {regularCard?.card?.card?.itemCards.map((item) => (
-                  <MenuItemCard
-                    key={item?.card?.info?.id}
-                    item={item}
-                    dummyImage={cloudinaryImageId}
-                  />
-                ))}
-              </div>
-            </div>
+            <RegularItemCards
+              key={regularCard?.card?.card?.title}
+              regularCard={regularCard?.card?.card}
+              cloudinaryImageId={cloudinaryImageId}
+            />
           ) : (
-            <div className="menu-main">
-              <h2 className="menu-items">
-                {regularCard?.card?.card?.title}{" "}
-                {regularCard?.card?.card?.categories[0]?.itemCards.length} items
-              </h2>
-
-              <div className="menu-main-card-container">
-                {regularCard?.card?.card?.categories[0]?.itemCards.map(
-                  (item) => (
-                    <MenuItemCard
-                      key={item?.card?.info?.id}
-                      item={item}
-                      dummyImage={cloudinaryImageId}
-                    />
-                  )
-                )}
-              </div>
-            </div>
+            <RegularCategoriesItemCards
+              key={regularCard?.card?.card?.title}
+              regularCard={regularCard?.card?.card}
+              cloudinaryImageId={cloudinaryImageId}
+            />
           )
         )}
       </div>

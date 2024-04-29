@@ -260,7 +260,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   overflow: hidden; /* Hide overflowing content */
-  margin: 1.5rem;
+  margin: 1.5rem 1.5rem 7rem 1.5rem;
   padding: 1rem;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -313,16 +313,62 @@ body {
   border-top: 2px solid rgb(128, 124, 124);
 }
 
-.menu-items {
-  margin-top: 5rem;
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 1rem;
   font-size: 1.7rem;
   color: #0dcf85;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-header:hover {
+  cursor: pointer;
+  transform: skew(1);
+  box-shadow: 0 4px 8px rgba(20, 204, 164, 0.3);
+}
+
+.menu-header .down-arrow:hover {
+  animation: bounce 1.2s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-7px);
+  }
+}
+
+/* ACCORDION */
+.menu-main-card-container.hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.menu-header:active + .menu-main-card-container {
+  max-height: 100vh;
 }
 
 /* || MENUITEM CARD || */
 .menu-item-card {
   background-color: #f4f5f4;
   box-shadow: 0 4px 8px rgba(100, 177, 166, 0.25);
+  margin: 1.5rem;
 }
 
 .menu-item-card:hover {
@@ -352,6 +398,30 @@ body {
   object-fit: cover;
   border: none;
   border-radius: 0.7rem;
+}
+
+.menu-item-card .menu-card-right {
+  position: relative;
+}
+
+.add-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4rem;
+  border: none;
+  border-top-right-radius: 0.5rem;
+  /* background-color: #0cdd8d;
+  color: rgb(100, 22, 151); */
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  background-color: #f0d90b;
+  color: green;
+  cursor: crosshair;
 }
 
 /* || ABOUT PAGE || */
