@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { CDN_URL } from "../utils/constants";
 import { useRestaurantMenu } from "../utils/useRestaurantMenu";
 import { RegularCategoriesItemCards, RegularItemCards } from "./RegularCards";
-import Shimmer from "./Shimmer";
+import { ShimmerRestaurantMenu } from "./ShimmerRestaurantMenu";
 
 const RestaurantMenu = () => {
+  // For Accordion
+  const [showIndex, setShowIndex] = useState(0);
+
   const { resId } = useParams();
 
   // Here I use custom hook useRestaurantMenu for fetch Data.
@@ -12,7 +16,7 @@ const RestaurantMenu = () => {
 
   // When data is not loading.
   if (resInfo === null) {
-    return <Shimmer />;
+    return <ShimmerRestaurantMenu />;
   }
 
   const {
@@ -57,18 +61,22 @@ const RestaurantMenu = () => {
           <img src={CDN_URL + cloudinaryImageId} alt={name} />
         </div>
 
-        {baseRegularCards?.map((regularCard) =>
+        {baseRegularCards?.map((regularCard, index) =>
           regularCard?.card?.card?.itemCards ? (
             <RegularItemCards
               key={regularCard?.card?.card?.title}
               regularCard={regularCard?.card?.card}
               cloudinaryImageId={cloudinaryImageId}
+              setShowIndex={() => setShowIndex(index)}
+              showItems={index === showIndex ? true : false}
             />
           ) : (
             <RegularCategoriesItemCards
               key={regularCard?.card?.card?.title}
               regularCard={regularCard?.card?.card}
               cloudinaryImageId={cloudinaryImageId}
+              setShowIndex={() => setShowIndex(index)}
+              showItems={index === showIndex ? true : false}
             />
           )
         )}

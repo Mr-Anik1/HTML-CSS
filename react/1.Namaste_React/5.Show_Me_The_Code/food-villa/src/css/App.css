@@ -407,10 +407,11 @@ body {
 .add-btn {
   position: absolute;
   top: 0;
-  right: 0;
-  padding: 0.4rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 0.5rem;
   border: none;
-  border-top-right-radius: 0.5rem;
+  border-radius: 0.8rem;
   /* background-color: #0cdd8d;
   color: rgb(100, 22, 151); */
   background-color: black;

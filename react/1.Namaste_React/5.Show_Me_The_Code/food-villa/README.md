@@ -293,3 +293,12 @@ A React application has two layers:
 - Data Layer
 
 UI layer is powered by Data layer.
+
+```
+const [singleShow, setSingleShow] = useState(true);
+
+  const handleClick = () => {
+    showItems === false ? setSingleShow(true) : setSingleShow(!singleShow);
+    setShowIndex();
+  };
+```

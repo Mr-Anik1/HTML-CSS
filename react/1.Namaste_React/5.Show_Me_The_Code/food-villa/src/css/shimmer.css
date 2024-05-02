@@ -116,3 +116,40 @@
     );
   }
 }
+
+/* || Shimmer - RestaurantMenu || */
+.restaurant-shimmer-body {
+  margin: 3rem 6rem;
+}
+
+.restaurant-shimmer-menu-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  width: 100%;
+  margin: 0 0 6rem 0;
+  background-color: rgb(250, 248, 248);
+  border-radius: 8px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.restaurant-shimmer-menu-card img {
+  height: 100%;
+  width: 13rem;
+}
+
+.restaurant-shimmer-menu-card-text {
+  height: 10rem;
+}
+
+.restaurant-shimmer-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+  height: 4rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+}

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import About from "./components/About";
@@ -10,18 +10,37 @@ import Header from "./components/Header";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 import "./css/App.css";
+import { UserContext } from "./utils/UserContext";
 
 // I want to split our app, Grocery will load when there is demand.
 const Grocery = lazy(() => import("./components/Grocery"));
 
-// Final AppLayout
+/**
+ * @Final_AppLayout
+ */
 function AppLayout() {
+  //---- DUMMY CODE FOR UNDERSTANDING CONTEXT API ---//
+  const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    // Dummy API call
+    const data = {
+      name: "Anik",
+    };
+
+    setUserName(data.name);
+  }, []);
+  //---- DUMMY CODE FOR UNDERSTANDING CONTEXT API ---//
+
   return (
-    <>
-      <Header />
-      <Outlet />
-      <Footer />
-    </>
+    // This way I have provided UserContext data all over my application and the setUserName can has to change userName instantly.
+    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+      <>
+        <Header />
+        <Outlet />
+        <Footer />
+      </>
+    </UserContext.Provider>
   );
 }
 
