@@ -16,6 +16,8 @@ const Search = ({ handleSearch }) => {
       <div className="search-bar">
         <input
           type="text"
+          id="searchbox"
+          name="searchbox"
           placeholder="Search Food or Restaurant"
           value={searchText}
           onChange={handleInputChange}

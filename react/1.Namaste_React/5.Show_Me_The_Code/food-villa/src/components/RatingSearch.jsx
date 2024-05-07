@@ -16,7 +16,10 @@ const RatingSearch = ({ handleRatingSearch }) => {
   return (
     <>
       <div className="rating-search">
+        {/* Always add either an id or a name attribute to each form field elements(like input fields, select boxes, etc.). It's recommended to use both for better accessibility and identification. */}
         <select
+          id="rating"
+          name="rating"
           value={rating}
           onChange={handleRatingChange}
           className="select-rating"

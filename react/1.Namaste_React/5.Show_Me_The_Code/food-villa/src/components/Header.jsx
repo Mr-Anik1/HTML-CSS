@@ -1,9 +1,14 @@
 import { useState } from "react";
+import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
+
+  // Subscribing to the store using a selector
+  const cartItems = useSelector((store) => store.cart.items);
 
   const handleBtnClick = () => {
     btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
@@ -20,27 +25,34 @@ const Header = () => {
         </div>
 
         <div className="nav-list">
-          <p>
+          <div>
             <Link className="link" to="/">
               Home
             </Link>
-          </p>
-          <p>
+          </div>
+          <div>
             <Link className="link" to="/about">
               About
             </Link>
-          </p>
-          <p>
+          </div>
+          <div>
             <Link className="link" to="/contact">
               Contact
             </Link>
-          </p>
-          <p>
+          </div>
+          <div>
             <Link className="link" to="/grocery">
               Grocery
             </Link>
-          </p>
-          <p className="link">Cart</p>
+          </div>
+          <div>
+            <Link className="link" to="/cart">
+              <div className="cart-icon">
+                <FaShoppingCart />
+                <span className="badge">{cartItems.length}</span>
+              </div>
+            </Link>
+          </div>
           <button className="login-btn" onClick={handleBtnClick}>
             {btnName}
           </button>

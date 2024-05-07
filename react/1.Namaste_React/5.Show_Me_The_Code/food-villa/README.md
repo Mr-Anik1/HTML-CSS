@@ -303,4 +303,35 @@ const [singleShow, setSingleShow] = useState(true);
   };
 ```
 
-#Episod-12
+# Episod-12
+
+The Redux store is a big object, and it is kept in a global central place.
+
+|| WRITE DATA ||
+
+When I click on the add button, it dispatches an action, and then it calls the function() [ reducer ]. This function modifies the slice of the Redux store.
+
+click add button --> dispatch Action --> calls reducer() function --> reducer() function modifies the slice of the Redux store.
+
+|| READ DATA ||
+
+We will use a selector to read the data from our Redux store, and the selector will modify our React component.
+
+|Redux store| --> SELECTOR read data from Redux store -> SELECTOR modify our react component
+
+SELECTOR is also known as subscribing to the store. When we use selector (subscribe a slice of store), it syncs to the target react component. That means when Redux store data changes,  the component will get the updated data instantly
+
+# You don't need to subscribe to the whole store; you only subscribe to the target slice of the store.
+
+### Wrong Code, Here, I have subscribed to the whole store. It is a very big problem. Because there are lots of slices in the store. When another slice of the store [ not mine ] has changed, this code will run because here we have subscribed to the whole store, not the target slice of the store.
+
+```
+const store=useSelector((store)=>store);
+const cartItems=store.cart.items;
+```
+
+### Right Code, Here, I have subscribed to only the target slice of the store, which is cart items. So when the cart items are changed, it will update my component. Otherwise not.
+
+```
+const cartItems=useSelector((store)=>store.cart.items)
+```

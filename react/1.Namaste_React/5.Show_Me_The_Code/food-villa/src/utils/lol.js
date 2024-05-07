@@ -1,39 +1,44 @@
-{
-  baseCard.map((regularCard) =>
-    regularCard?.card?.card?.itemCards ? (
-      <div className="menu-main" key={regularCard?.card?.card?.title}>
-        <h2 className="menu-items">
-          {regularCard?.card?.card?.title}{" "}
-          {regularCard?.card?.card?.itemCards.length} items
-        </h2>
+<>
+  {/* NavBar */}
+  <div className="navbar">
+    <div className="logo">
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
+    </div>
 
-        <div className="menu-main-card-container">
-          {regularCard?.card?.card?.itemCards.map((item) => (
-            <MenuItemCard
-              key={item?.card?.info?.id}
-              item={item}
-              dummyImage={cloudinaryImageId}
-            />
-          ))}
-        </div>
-      </div>
-    ) : (
-      <div className="menu-main" key={regularCard?.card?.card?.title}>
-        <h2 className="menu-items">
-          {regularCard?.card?.card?.title}{" "}
-          {regularCard?.card?.card?.categories[0]?.itemCards.length} items
-        </h2>
-
-        <div className="menu-main-card-container">
-          {regularCard?.card?.card?.categories[0]?.itemCards.map((item) => (
-            <MenuItemCard
-              key={item?.card?.info?.id}
-              item={item}
-              dummyImage={cloudinaryImageId}
-            />
-          ))}
-        </div>
-      </div>
-    )
-  );
-}
+    <div className="nav-list">
+      <p>
+        <Link className="link" to="/">
+          Home
+        </Link>
+      </p>
+      <p>
+        <Link className="link" to="/about">
+          About
+        </Link>
+      </p>
+      <p>
+        <Link className="link" to="/contact">
+          Contact
+        </Link>
+      </p>
+      <p>
+        <Link className="link" to="/grocery">
+          Grocery
+        </Link>
+      </p>
+      <p>
+        <Link className="link" to="/cart">
+          <span className="cart-icon">
+            <FaShoppingCart />
+            <span className="badge">{cartItems.length}</span>
+          </span>
+        </Link>
+      </p>
+      <button className="login-btn" onClick={handleBtnClick}>
+        {btnName}
+      </button>
+    </div>
+  </div>
+</>;

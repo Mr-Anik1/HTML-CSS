@@ -42,16 +42,16 @@ const Body = () => {
 
     const json = await data.json();
 
-    // Update States
-    setAllRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setRatingRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setFilteredRestaurant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    const restaurantsData =
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants ||
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+
+    // Update states with the restaurants data
+    setAllRestaurants(restaurantsData);
+    setRatingRestaurants(restaurantsData);
+    setFilteredRestaurant(restaurantsData);
   };
 
   /**
@@ -74,7 +74,8 @@ const Body = () => {
     fetchData();
   }, []);
 
-  return allRestaurants?.length === 0 ? (
+  // If allRestaurants is an empty array OR allRestaurants doesn't exist, then return shimmer.
+  return allRestaurants?.length === 0 || !allRestaurants ? (
     <Shimmer />
   ) : (
     <>

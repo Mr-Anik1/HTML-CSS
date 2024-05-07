@@ -7,8 +7,8 @@ const ErrorPage = () => {
     <>
       <div className="dummy-section">
         <div className="dummy-content">
-          <h1>Opps!!!</h1>
-          <h2>Something went wrong</h2>
+          <h1 className="oops-msg">Opps!</h1>
+          <h1>Something Went Wrong.</h1>
         </div>
       </div>
     </>

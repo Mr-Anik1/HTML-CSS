@@ -1,3 +1,4 @@
+import { useState } from "react";
 import MenuItemCard from "./MenuItemCard";
 
 const RegularCategoriesItemCards = ({
@@ -6,7 +7,11 @@ const RegularCategoriesItemCards = ({
   showItems,
   setShowIndex,
 }) => {
+  const [showSingle, setShowSingle] = useState(true);
+
   const handleClick = () => {
+    showItems === false ? setShowSingle(true) : setShowSingle(!showSingle);
+
     setShowIndex();
   };
 
@@ -19,7 +24,7 @@ const RegularCategoriesItemCards = ({
         <span className="down-arrow">⬇️</span>
       </div>
 
-      {showItems && (
+      {showItems && showSingle && (
         <div className={`menu-main-card-container`}>
           {regularCard?.categories[0]?.itemCards?.map((item) => (
             <MenuItemCard
@@ -30,16 +35,6 @@ const RegularCategoriesItemCards = ({
           ))}
         </div>
       )}
-
-      {/* <div className={`menu-main-card-container  ${showItems ? "" : "hidden"}`}>
-        {regularCard?.categories[0]?.itemCards?.map((item) => (
-          <MenuItemCard
-            key={item?.card?.info?.id}
-            item={item}
-            dummyImage={cloudinaryImageId}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };
@@ -50,7 +45,11 @@ const RegularItemCards = ({
   showItems,
   setShowIndex,
 }) => {
+  const [showSingle, setShowSingle] = useState(true);
+
   const handleClick = () => {
+    showItems === false ? setShowSingle(true) : setShowSingle(!showSingle);
+
     setShowIndex();
   };
 
@@ -63,7 +62,7 @@ const RegularItemCards = ({
         <span className="down-arrow">⬇️</span>
       </div>
 
-      {showItems && (
+      {showItems && showSingle && (
         <div className={`menu-main-card-container`}>
           {regularCard?.itemCards?.map((item) => (
             <MenuItemCard
@@ -74,16 +73,6 @@ const RegularItemCards = ({
           ))}
         </div>
       )}
-
-      {/* <div className={`menu-main-card-container  ${showItems ? "" : "hidden"}`}>
-        {regularCard?.itemCards?.map((item) => (
-          <MenuItemCard
-            key={item?.card?.info?.id}
-            item={item}
-            dummyImage={cloudinaryImageId}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };

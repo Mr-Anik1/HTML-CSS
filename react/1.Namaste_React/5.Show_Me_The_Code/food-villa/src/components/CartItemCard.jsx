@@ -1,20 +1,14 @@
 import { useDispatch } from "react-redux";
-import { addItems } from "../utils/cartSlice";
+import { removeItem } from "../utils/cartSlice";
 import { CDN_URL } from "../utils/constants";
 
-const MenuItemCard = ({ item, dummyImage }) => {
+const CartItemCard = ({ item, index }) => {
   let { name, price, defaultPrice, description, imageId } = item?.card?.info;
-
-  // If image won't found, it will use dummyImage
-  if (!imageId) {
-    imageId = dummyImage;
-  }
 
   const dispatch = useDispatch();
 
-  const handleAddButtonClick = () => {
-    // Dispatch an action
-    dispatch(addItems(item));
+  const handleRemoveButtonClick = () => {
+    dispatch(removeItem(index));
   };
 
   return (
@@ -37,8 +31,8 @@ const MenuItemCard = ({ item, dummyImage }) => {
         {/* Right */}
         <div className="menu-card-right">
           <img src={CDN_URL + imageId} alt="Menu Card Image" />
-          <button className="add-btn" onClick={handleAddButtonClick}>
-            Add +{" "}
+          <button className="remove-btn" onClick={handleRemoveButtonClick}>
+            Remove -
           </button>
         </div>
       </div>
@@ -46,4 +40,4 @@ const MenuItemCard = ({ item, dummyImage }) => {
   );
 };
 
-export default MenuItemCard;
+export { CartItemCard };
