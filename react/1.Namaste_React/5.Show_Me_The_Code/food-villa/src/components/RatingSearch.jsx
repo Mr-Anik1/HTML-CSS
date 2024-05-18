@@ -20,6 +20,7 @@ const RatingSearch = ({ handleRatingSearch }) => {
         <select
           id="rating"
           name="rating"
+          data-testid="filterByRating"
           value={rating}
           onChange={handleRatingChange}
           className="select-rating"

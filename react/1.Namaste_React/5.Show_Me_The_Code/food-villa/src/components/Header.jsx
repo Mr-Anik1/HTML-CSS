@@ -49,7 +49,9 @@ const Header = () => {
             <Link className="link" to="/cart">
               <div className="cart-icon">
                 <FaShoppingCart />
-                <span className="badge">{cartItems.length}</span>
+                <span data-testid="cartCount" className="badge">
+                  {cartItems.length}
+                </span>
               </div>
             </Link>
           </div>

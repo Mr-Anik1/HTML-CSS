@@ -334,6 +334,22 @@ const cartItems=store.cart.items;
 
 ```
 const cartItems=useSelector((store)=>store.cart.items)
-``` 
+```
 
-#Episod-13 Testing
+# Episod-13 Testing
+
+( \_ _ add _ \_ ) double underscore is called dunder method.
+
+Vitest comes with test suites(describe), test cases(it), and assertions(expect().toEqual)
+
+When we want to test update state like useState, useEffect then we need to use act function.
+
+```
+await act(async () =>
+    render(
+      <BrowserRouter>
+        <Body />
+      </BrowserRouter>
+    )
+);
+```

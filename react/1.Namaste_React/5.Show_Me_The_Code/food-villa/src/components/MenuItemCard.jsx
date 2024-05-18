@@ -19,7 +19,7 @@ const MenuItemCard = ({ item, dummyImage }) => {
 
   return (
     <>
-      <div className="menu-card menu-item-card">
+      <div data-testid="menuItemCard" className="menu-card menu-item-card">
         {/* Left */}
         <div className="menu-card-left">
           <h2 className="menu-name">{name}</h2>

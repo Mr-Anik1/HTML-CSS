@@ -18,6 +18,7 @@ const Search = ({ handleSearch }) => {
           type="text"
           id="searchbox"
           name="searchbox"
+          data-testid="searchInput"
           placeholder="Search Food or Restaurant"
           value={searchText}
           onChange={handleInputChange}

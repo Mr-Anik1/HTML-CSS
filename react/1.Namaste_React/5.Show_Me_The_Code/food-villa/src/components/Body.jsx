@@ -42,10 +42,11 @@ const Body = () => {
 
     const json = await data.json();
 
+    // cards[1] || cards[2] || cards[4]
     const restaurantsData =
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants ||
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
 
     // Update states with the restaurants data

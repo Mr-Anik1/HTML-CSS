@@ -15,7 +15,7 @@ export const RestaurantCard = (props) => {
 
   return (
     <>
-      <div className="card">
+      <div data-testid="restaurantCard" className="card">
         <img src={CDN_URL + cloudinaryImageId} alt={name} />
         <div className="card-text">
           <h1>{name}</h1>
