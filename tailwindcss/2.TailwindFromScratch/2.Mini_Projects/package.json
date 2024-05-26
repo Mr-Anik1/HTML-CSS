@@ -1,0 +1,18 @@
+{
+  "name": "2.mini_projects",
+  "version": "1.0.0",
+  "description": "Here I will build 5 mini projects with Tailwindcss to sharpen my tailwindcss skills. The tailwindcss skill is very important for frontend development. In the near future, I want to build some React projects, and I am sure I will use Tailwind for those React projects.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/css/input.css -o ./src/css/style.css",
+    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "Anik",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwindcss": "^3.4.3"
+  }
+}
