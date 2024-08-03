@@ -1,0 +1,80 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.hamburger-button {
+  width: 80px;
+  height: 50px;
+  background-color: rgba(104, 243, 185, 0.568);
+  border-radius: 28%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 0.1rem;
+  cursor: pointer;
+}
+
+.bar {
+  width: 50px;
+  height: 3px;
+  background-color: rgb(58, 59, 59);
+  margin: 4px 0;
+}
+
+/* || ANIMATIONS || */
+.animatedBar1 {
+  animation-name: flipBar1;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.animatedBar2 {
+  animation-name: fadeBar2;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.animatedBar3 {
+  animation-name: flipBar3;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+/* For Bar1 */
+@keyframes flipBar1 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+}
+
+/* For Middle Bar */
+@keyframes fadeBar2 {
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+/* For Last Bar */
+@keyframes flipBar3 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}

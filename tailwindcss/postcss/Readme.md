@@ -6,23 +6,10 @@ Install tailwindcss and its peer dependencies via npm.
 npm install -D tailwindcss postcss autoprefixer vite
 ```
 
-### Create a tailwind.config.js file with this command.
+### Create tailwind.config.js and postcss.config.js files with this command.
 
 ```
-npx tailwindcss init
-```
-
-After installing tailwindcss and postcss, you must now create a postcss.config.js file and input the below code into it.
-
-### postcss.config.js
-
-```
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-};
+npx tailwindcss init -p
 ```
 
 ### Add the below code to the tailwind.config.js

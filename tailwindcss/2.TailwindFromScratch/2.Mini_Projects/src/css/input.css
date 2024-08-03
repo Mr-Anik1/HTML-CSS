@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Repetitive Class for "Clipboard Project" */
+@layer base {
+  h3 {
+    @apply text-darkGrayishBlue mb-8 text-4xl font-bold md:text-5xl;
+  }
+
+  h5 {
+    @apply text-darkGrayishBlue mb-2 text-2xl font-bold;
+  }
+}
+
+.section-container {
+  @apply mx-auto max-w-6xl px-10 text-center;
+}
+
+.section-content {
+  @apply text-grayishBlue mx-auto max-w-3xl text-center text-xl leading-9;
+}
+
+.button-container {
+  @apply flex w-full flex-col justify-center space-y-6 text-xl text-white md:flex-row md:space-x-4 md:space-y-0;
+}
+
+.single-button {
+  @apply rounded-full p-4 px-8 shadow-lg duration-200 hover:opacity-80;
+}
