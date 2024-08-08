@@ -110,6 +110,7 @@ npm run dev
 - Create react app
 - Configured Tailwind CSS
 - Header
-- Login Form
+- Login/SignIn Form
+- SignUp Form
 
-00:52:23
+01:20:00
