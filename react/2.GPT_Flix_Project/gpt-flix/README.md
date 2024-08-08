@@ -109,8 +109,10 @@ npm run dev
 
 - Create react app
 - Configured Tailwind CSS
+- Routing the application
 - Header
 - Login/SignIn Form
 - SignUp Form
+- Form Validation
 
-01:20:00
+01:57:30
