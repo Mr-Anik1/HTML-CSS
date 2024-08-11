@@ -1,5 +1,10 @@
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { useRef, useState } from "react";
 import { Form } from "react-router-dom";
+import { auth } from "../utils/firebase";
 import { checkValidData } from "../utils/validate";
 import { Header } from "./Header";
 
@@ -18,8 +23,46 @@ const Login = () => {
       email: email.current?.value,
       name: name.current?.value,
     });
-
     setErrorMessage(message);
+    // If error message is exist then return and don't go ahed.
+    if (message) return;
+
+    // Otherwise go ahed to SignIn/SignUp
+    if (!isSignInForm) {
+      // SignUp logic
+      createUserWithEmailAndPassword(
+        auth,
+        email.current?.value,
+        password.current?.value,
+      )
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(`${errorCode} - SignUp Failed`);
+          console.log(errorMessage);
+        });
+    } else {
+      // SignIn logic
+      signInWithEmailAndPassword(
+        auth,
+        email.current?.value,
+        password.current?.value,
+      )
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(`${errorCode} - SignIn Failed`);
+          console.log(errorMessage);
+        });
+    }
   };
 
   const toggleSignInForm = () => {

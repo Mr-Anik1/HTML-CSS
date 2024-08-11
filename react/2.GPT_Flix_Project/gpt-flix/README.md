@@ -89,6 +89,85 @@ npm install -D prettier prettier-plugin-tailwindcss
 npm run dev
 ```
 
+# Firebase setup
+
+- Register app
+- Add Firebase SDK
+
+```
+npm install firebase
+```
+
+- Create firebase.jsx file in the utils directory and add below lines in it
+
+```
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAuHdP0OY-5ALDbkKDzZAcT31TvIFVUA5c",
+  authDomain: "gptflix-a47a4.firebaseapp.com",
+  projectId: "gptflix-a47a4",
+  storageBucket: "gptflix-a47a4.appspot.com",
+  messagingSenderId: "135059636328",
+  appId: "1:135059636328:web:fcd7792baa5a85d5aebbdd",
+  measurementId: "G-MHL3HJGT9V"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+```
+
+- Install Firebase CLI
+
+```
+npm install -g firebase-tools
+```
+
+- Go to the app console and click authentication after authentication you have to enable Email/Password option.
+
+- Deploy to Firebase Hosting (Later)
+
+  - First Step
+
+  ```
+  firebase login
+  ```
+
+  - Second Step
+
+  ```
+  firebase init
+  ```
+
+  - After Firebase init:
+
+    - Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+    - Use an existing project
+    - gptflix-a47a4 (GptFlix)
+    - What do you want to use as your public directory? (public) ==> dist
+    - Configure as a single-page app (rewrite all urls to /index.html)? (y/N) ==> N
+    - Set up automatic builds and deploys with GitHub? (y/N) ==> N
+
+    - It will create firebase.json and .firebaserc file.
+
+  - Third Step (When you're ready, deploy your web app)
+
+  ```
+  firebase deploy
+  ```
+
+### It must be remembered that before you deploy your project, you have to build your project with this command: npm run build.
+
+- Project Console: https://console.firebase.google.com/project/gptflix-a47a4/overview
+- Hosting URL: https://gptflix-a47a4.web.app
+
 # Features
 
 - Login/Signup
@@ -114,5 +193,8 @@ npm run dev
 - Login/SignIn Form
 - SignUp Form
 - Form Validation
+- Firebase Setup
+- Deploying our app to production
+- SignUp user account
 
-01:57:30
+02:48:00
