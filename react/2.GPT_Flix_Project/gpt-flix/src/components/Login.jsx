@@ -1,16 +1,22 @@
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { useRef, useState } from "react";
-import { Form } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Form, useNavigate } from "react-router-dom";
+import { bgImage } from "../utils/constant";
 import { auth } from "../utils/firebase";
+import { addUser } from "../utils/userSlice";
 import { checkValidData } from "../utils/validate";
 import { Header } from "./Header";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const name = useRef(null);
   const email = useRef(null);
@@ -37,7 +43,30 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
+
+          // Update
+          updateProfile(user, {
+            displayName: name.current?.value,
+            photoURL: "https://avatars.githubusercontent.com/u/75731184?v=4",
+          })
+            .then(() => {
+              // Update redux store with updated user information
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                }),
+              );
+
+              // When user is signed up and Profile is updated successfully then navigate to the browse page
+              navigate("/browse");
+            })
+            .catch((error) => {
+              setErrorMessage(error.message);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -54,7 +83,9 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
+
+          // When user is signed in navigate to the browse page
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -72,12 +103,12 @@ const Login = () => {
   return (
     <>
       <div>
-        <Header />
+        <div className="absolute z-10">
+          <Header />
+        </div>
+
         <div className="absolute">
-          <img
-            src="https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/89a29202-8f93-4dd9-b75b-71ba2b0a7620/BD-en-20240617-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-            alt="bg-image"
-          />
+          <img src={bgImage} alt="bg-image" />
         </div>
 
         <div className="absolute left-0 right-0 mx-auto mt-24 flex w-1/4 rounded-lg bg-black bg-opacity-80">

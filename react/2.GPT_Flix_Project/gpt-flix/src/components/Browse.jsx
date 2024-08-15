@@ -1,15 +1,9 @@
-import { Link } from "react-router-dom";
+import { Header } from "./Header";
 
 const Browse = () => {
   return (
     <>
-      <div>Browse Component</div>
-      <Link
-        to={"/"}
-        className="text-sky-600 underline decoration-yellow-500 decoration-wavy underline-offset-4"
-      >
-        Login Page
-      </Link>
+      <Header />
     </>
   );
 };

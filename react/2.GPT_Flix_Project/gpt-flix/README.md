@@ -168,6 +168,20 @@ npm install -g firebase-tools
 - Project Console: https://console.firebase.google.com/project/gptflix-a47a4/overview
 - Hosting URL: https://gptflix-a47a4.web.app
 
+# Redux Setup
+
+- Install redux toolkit as a devDependencies
+
+```
+npm i -D @reduxjs/toolkit
+```
+
+- Install redux as a dependencies
+
+```
+npm i react-redux
+```
+
 # Features
 
 - Login/Signup
@@ -195,6 +209,8 @@ npm install -g firebase-tools
 - Form Validation
 - Firebase Setup
 - Deploying our app to production
-- SignUp user account
-
-02:48:00
+- Created Sign Up user account and navigate to the browse page
+- Implemented Sign In user API and navigate to the browse page
+- Created Redux Store with userSlice
+- Implemented Sign Out and navigate to the home page
+- Update user profile
