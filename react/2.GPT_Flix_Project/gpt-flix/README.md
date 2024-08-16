@@ -214,3 +214,8 @@ npm i react-redux
 - Created Redux Store with userSlice
 - Implemented Sign Out and navigate to the home page
 - Update user profile
+- Bug Fix: Sign Up user displayName and profile picture update
+- Bug Fix: If user is not logged in redirect to /browse to login page(/) and vise-versa
+- Unsubscribe to the onAuthStateChanged callback
+
+00:32:30

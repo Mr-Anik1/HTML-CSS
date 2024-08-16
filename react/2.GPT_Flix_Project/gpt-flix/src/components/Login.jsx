@@ -5,8 +5,8 @@ import {
 } from "firebase/auth";
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { Form, useNavigate } from "react-router-dom";
-import { bgImage } from "../utils/constant";
+import { Form } from "react-router-dom";
+import { BG_IMAGE, USER_AVATAR } from "../utils/constant";
 import { auth } from "../utils/firebase";
 import { addUser } from "../utils/userSlice";
 import { checkValidData } from "../utils/validate";
@@ -15,7 +15,6 @@ import { Header } from "./Header";
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const name = useRef(null);
@@ -35,7 +34,7 @@ const Login = () => {
 
     // Otherwise go ahed to SignIn/SignUp
     if (!isSignInForm) {
-      // SignUp logic
+      // Sign Up logic
       createUserWithEmailAndPassword(
         auth,
         email.current?.value,
@@ -47,10 +46,10 @@ const Login = () => {
           // Update
           updateProfile(user, {
             displayName: name.current?.value,
-            photoURL: "https://avatars.githubusercontent.com/u/75731184?v=4",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
-              // Update redux store with updated user information
+              // Update the redux store with updated user information
               const { uid, email, displayName, photoURL } = auth.currentUser;
               dispatch(
                 addUser({
@@ -60,22 +59,20 @@ const Login = () => {
                   photoURL: photoURL,
                 }),
               );
-
-              // When user is signed up and Profile is updated successfully then navigate to the browse page
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error.message);
+              console.log(error);
             });
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          setErrorMessage(`${errorCode} - SignUp Failed`);
-          console.log(errorMessage);
+          setErrorMessage(`${errorCode} - ${errorMessage}`);
+          console.log(error);
         });
     } else {
-      // SignIn logic
+      // Sign In logic
       signInWithEmailAndPassword(
         auth,
         email.current?.value,
@@ -83,15 +80,12 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-
-          // When user is signed in navigate to the browse page
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          setErrorMessage(`${errorCode} - SignIn Failed`);
-          console.log(errorMessage);
+          setErrorMessage(`${errorCode} - ${errorMessage}`);
+          console.log(error);
         });
     }
   };
@@ -108,7 +102,7 @@ const Login = () => {
         </div>
 
         <div className="absolute">
-          <img src={bgImage} alt="bg-image" />
+          <img src={BG_IMAGE} alt="bg-image" />
         </div>
 
         <div className="absolute left-0 right-0 mx-auto mt-24 flex w-1/4 rounded-lg bg-black bg-opacity-80">
