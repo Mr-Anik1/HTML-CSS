@@ -8,3 +8,12 @@ export const BG_IMAGE =
 
 export const USER_AVATAR =
   "https://avatars.githubusercontent.com/u/75731184?v=4";
+
+export const API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YzJkZWYwNmI0YzZlMTIxNjEyMDhlY2QxODU0ZTJmMCIsIm5iZiI6MTcyMzk2NTI3MS4wNjY4NzksInN1YiI6IjY2YzE5ODZmZWNiYjE5MTVjYzg5OWUwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._A3yj3dsMpKcN2lOwMCPtkp1sk51X_g8hT8mkfXxBNI",
+  },
+};
