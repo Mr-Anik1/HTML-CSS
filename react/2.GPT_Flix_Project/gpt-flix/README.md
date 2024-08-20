@@ -228,5 +228,9 @@ npm i react-redux
 - Unsubscribe to the onAuthStateChanged callback
 - Register TMDB API & create an app & get access token
 - Create useNowPlayingMovies custom hook for get data from the TMDB now playing movie list API
+- Create VideoTitle and VideoBackground Component.
+- Create useMovieTrailer custom hook for get movie trailer data from the TMDB API and set trailer video to the VideoBackground component.
 
-01:09:00
+https://youtu.be/73_1biulkYk
+
+02:03:00
