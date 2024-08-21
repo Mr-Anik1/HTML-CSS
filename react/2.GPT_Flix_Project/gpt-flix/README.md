@@ -227,6 +227,22 @@ npm i react-redux
 - Bug Fix: If user is not logged in redirect to /browse to login page(/) and vise-versa
 - Unsubscribe to the onAuthStateChanged callback
 - Register TMDB API & create an app & get access token
+- Create movieSlice
 - Create useNowPlayingMovies custom hook for get data from the TMDB now playing movie list API
+- Update store with movie data
+- Create MainContainer and SecondaryContainer
+- Create trailerVideo state in the movieSlice
+- Create useMovieTrailer custom hook for get data for trailer video
+- Update the store with the trailer video data
+- Add the trailer video in the VideoBackground component with trailer video data.
 
-02:03:00
+# Problem
+
+- In the VideoBackground component Youtube video border hasn't remove.
+
+?autoplay=1&mute=1
+allowFullScreen
+
+<link rel="icon" type="image/png" href="./src/assets/favicon.png" />
+
+02:35:00
