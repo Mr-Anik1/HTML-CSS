@@ -1,0 +1,53 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import {
+  API_OPTIONS,
+  NOW_PLAYING_MOVIES_API,
+  TOP_RATED_MOVIES_API,
+  UPCOMING_MOVIES_API,
+} from "../utils/constant";
+import {
+  addNowPlayingMovies,
+  addTopRatedMovies,
+  addUpcomingMovies,
+} from "../utils/moviesSlice";
+
+const useAllCategoryMovies = () => {
+  const dispatch = useDispatch();
+
+  // Fetch Data from TMDB API and update the store
+  const getAllCategoryMovies = async () => {
+    /**
+     * @Now_Playing_Movies
+     */
+    const nowPlayingMoviesData = await fetch(
+      NOW_PLAYING_MOVIES_API,
+      API_OPTIONS,
+    );
+    const nowPlayingMoviesJSON = await nowPlayingMoviesData.json();
+    // Add Now Playing Movies data to the Redux store
+    dispatch(addNowPlayingMovies(nowPlayingMoviesJSON.results));
+
+    /**
+     * @Upcoming_Movies
+     */
+    const upcomingMoviesData = await fetch(UPCOMING_MOVIES_API, API_OPTIONS);
+    const upcomingMoviesJSON = await upcomingMoviesData.json();
+    // Add Up Coming Movies data to the Redux store
+    dispatch(addUpcomingMovies(upcomingMoviesJSON.results));
+
+    /**
+     * @Top_Rated_Movies
+     */
+    const topRatedMoviesData = await fetch(TOP_RATED_MOVIES_API, API_OPTIONS);
+    const topRatedMoviesJSON = await topRatedMoviesData.json();
+    // Add Top Rated Movies data to the Redux store
+    dispatch(addTopRatedMovies(topRatedMoviesJSON.results));
+  };
+
+  useEffect(() => {
+    getAllCategoryMovies();
+  }, []);
+};
+
+export { useAllCategoryMovies };

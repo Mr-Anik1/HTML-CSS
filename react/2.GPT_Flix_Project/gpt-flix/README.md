@@ -228,13 +228,15 @@ npm i react-redux
 - Unsubscribe to the onAuthStateChanged callback
 - Register TMDB API & create an app & get access token
 - Create movieSlice
-- Create useNowPlayingMovies custom hook for get data from the TMDB now playing movie list API
+- Create useAllCategoryMovies custom hook for get data from the TMDB
 - Update store with movie data
 - Create MainContainer and SecondaryContainer
 - Create trailerVideo state in the movieSlice
 - Create useMovieTrailer custom hook for get data for trailer video
 - Update the store with the trailer video data
 - Add the trailer video in the VideoBackground component with trailer video data.
+- Create MovieList and MovieCard Component
+- Access Movies data from the store and pass the movie lists component
 
 # Problem
 
@@ -245,4 +247,4 @@ allowFullScreen
 
 <link rel="icon" type="image/png" href="./src/assets/favicon.png" />
 
-02:35:00
+03:20:00
