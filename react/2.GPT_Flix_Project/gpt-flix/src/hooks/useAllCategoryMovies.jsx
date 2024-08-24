@@ -3,11 +3,13 @@ import { useDispatch } from "react-redux";
 import {
   API_OPTIONS,
   NOW_PLAYING_MOVIES_API,
+  POPULAR_MOVIES_API,
   TOP_RATED_MOVIES_API,
   UPCOMING_MOVIES_API,
 } from "../utils/constant";
 import {
   addNowPlayingMovies,
+  addPopularMovies,
   addTopRatedMovies,
   addUpcomingMovies,
 } from "../utils/moviesSlice";
@@ -35,6 +37,14 @@ const useAllCategoryMovies = () => {
     const upcomingMoviesJSON = await upcomingMoviesData.json();
     // Add Up Coming Movies data to the Redux store
     dispatch(addUpcomingMovies(upcomingMoviesJSON.results));
+
+    /**
+     * @Popular_Movies
+     */
+    const popuplarMoviesData = await fetch(POPULAR_MOVIES_API, API_OPTIONS);
+    const popuplarMoviesJSON = await popuplarMoviesData.json();
+    // Add Popular Movies data to the Redux store
+    dispatch(addPopularMovies(popuplarMoviesJSON.results));
 
     /**
      * @Top_Rated_Movies

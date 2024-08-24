@@ -3,6 +3,8 @@ export const userIcon =
 
 export const LOGO = "https://iili.io/d0HCgVV.png";
 
+export const FAVICON = "https://iili.io/dX2x1Nj.png";
+
 export const BG_IMAGE =
   "https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/89a29202-8f93-4dd9-b75b-71ba2b0a7620/BD-en-20240617-popsignuptwoweeks-perspective_alpha_website_large.jpg";
 

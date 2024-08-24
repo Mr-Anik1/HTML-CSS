@@ -237,6 +237,9 @@ npm i react-redux
 - Add the trailer video in the VideoBackground component with trailer video data.
 - Create MovieList and MovieCard Component
 - Access Movies data from the store and pass the movie lists component
+- Add popular movie list
+- Create Footer Component for the login page
+- Add Favicon in the index.html page
 
 # Problem
 
@@ -244,7 +247,3 @@ npm i react-redux
 
 ?autoplay=1&mute=1
 allowFullScreen
-
-<link rel="icon" type="image/png" href="./src/assets/favicon.png" />
-
-03:20:00
