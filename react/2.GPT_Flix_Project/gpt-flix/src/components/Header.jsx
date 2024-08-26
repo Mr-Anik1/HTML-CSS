@@ -2,14 +2,18 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { changeLanguage } from "../utils/configSlice";
 import { LOGO } from "../utils/constant";
 import { auth } from "../utils/firebase";
+import { toggleGptSearchView } from "../utils/gptSlice";
+import { SUPPORTED_LANGUAGE } from "../utils/languageConstant";
 import { addUser, removeUser } from "../utils/userSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
+  const showGptSearch = useSelector((store) => store.gpt?.showGptSearch);
 
   const handleSignOut = () => {
     signOut(auth)
@@ -57,15 +61,44 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
 
+  const handleGptSearchClick = () => {
+    dispatch(toggleGptSearchView());
+  };
+
+  const handleLanguageChange = (e) => {
+    dispatch(changeLanguage(e.target.value));
+  };
+
   return (
     <>
       <div className="absolute z-10 flex w-screen items-center justify-between bg-gradient-to-b from-black px-4 py-2">
         {/* Right Side */}
         <img className="w-44" src={LOGO} alt="logo" />
 
-        {/* Left Side */}
+        {/* Left Side only show when user is logged-in*/}
         {user && (
           <div className="flex items-center space-x-4">
+            {/* User language preference only show when showGptSearch is true */}
+            {showGptSearch && (
+              <select
+                className="rounded-md bg-gray-800 px-2 py-1 text-white shadow-md hover:shadow-blue-500"
+                id="lang"
+                onChange={handleLanguageChange}
+              >
+                {SUPPORTED_LANGUAGE.map((lang) => (
+                  <option key={lang.identifier} value={lang.identifier}>
+                    {lang.name}
+                  </option>
+                ))}
+              </select>
+            )}
+
+            <button
+              onClick={handleGptSearchClick}
+              className="rounded-md bg-sky-500 px-2 py-1 font-semibold shadow-md transition duration-200 hover:bg-gradient-to-r hover:from-pink-700 hover:to-teal-500 hover:text-white hover:shadow-slate-400"
+            >
+              {showGptSearch ? "Home Page" : "GPT Search"}
+            </button>
             <img
               src={user?.photoURL}
               alt="usericon"
@@ -73,7 +106,7 @@ const Header = () => {
             />
             <button
               onClick={handleSignOut}
-              className="hover: rounded-md bg-red-600 px-2 py-1 font-semibold text-white transition hover:bg-gradient-to-r hover:from-fuchsia-600 hover:to-sky-500"
+              className="rounded-md bg-red-600 px-2 py-1 font-semibold text-white shadow-md transition duration-200 hover:bg-gradient-to-r hover:from-fuchsia-600 hover:to-sky-500 hover:shadow-teal-300"
             >
               Sign Out
             </button>

@@ -240,6 +240,9 @@ npm i react-redux
 - Add popular movie list
 - Create Footer Component for the login page
 - Add Favicon in the index.html page
+- GPT Search Bar
+- GPT Search Page
+- Multi-language feature in our app
 
 # Problem
 
@@ -247,3 +250,5 @@ npm i react-redux
 
 ?autoplay=1&mute=1
 allowFullScreen
+
+01:23:40
