@@ -243,12 +243,27 @@ npm i react-redux
 - GPT Search Bar
 - GPT Search Page
 - Multi-language feature in our app
+- Create movie suggestion option by using the GeminiAI API and the TMDB API
 
 # Problem
 
 - In the VideoBackground component Youtube video border hasn't remove.
 
+# vite env
+
+I have to name of the api in the .env file VITE_OPEN_AI_KEY insted of REACT_APP_OPEN_AI_KEY
+
+```
+VITE_OPEN_AI_KEY = "key...."
+```
+
+I have to use this api key this way
+
+```
+import.meta.env.VITE_OPEN_AI_KEY,
+```
+
 ?autoplay=1&mute=1
 allowFullScreen
 
-01:23:40
+03:30:00

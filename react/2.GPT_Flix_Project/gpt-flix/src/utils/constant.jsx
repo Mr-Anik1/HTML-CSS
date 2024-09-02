@@ -11,6 +11,11 @@ export const BG_IMAGE =
 export const USER_AVATAR =
   "https://avatars.githubusercontent.com/u/75731184?v=4";
 
+/**
+ * @Warning_ForgiveMe
+ * I have to store these secret keys in the.env file. I want to deploy my app in the Firebase, but if I want to add a secret variable in the Firebase, it is a paid version. Now I want to use the free version of Firebase; for this reason, I didn't add this secret variable in the.env file.
+ *
+ */
 export const API_OPTIONS = {
   method: "GET",
   headers: {
@@ -19,6 +24,10 @@ export const API_OPTIONS = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YzJkZWYwNmI0YzZlMTIxNjEyMDhlY2QxODU0ZTJmMCIsIm5iZiI6MTcyMzk2NTI3MS4wNjY4NzksInN1YiI6IjY2YzE5ODZmZWNiYjE5MTVjYzg5OWUwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._A3yj3dsMpKcN2lOwMCPtkp1sk51X_g8hT8mkfXxBNI",
   },
 };
+
+export const GEMINI_AI_KEY = "AIzaSyAivCdLBbUwikGO69FNXS7jeHlcUWuQlhg";
+
+// ----------------//--//---------------------//
 
 export const TMDB_IMG_URL = "https://image.tmdb.org/t/p/w300";
 
@@ -32,3 +41,19 @@ export const UPCOMING_MOVIES_API =
 
 export const TOP_RATED_MOVIES_API =
   "https://api.themoviedb.org/3/movie/top_rated?page=1";
+
+export const MOVIE_TRAILER_VIDEO_API = (movieId) => {
+  return `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`;
+};
+
+export const QUERY = (searchValue) => {
+  const queryText = `Act as a movie recommendation system and suggest some movies for the query: ${searchValue}.  Only give me the names of 5 movies with commas separated, like the example given below. Example result: Longlegs, Twisters, The Godfather, Spirited Away, The Green Mile.`;
+
+  return queryText;
+};
+
+export const SEARCH_MOVIE_API = (movieName) => {
+  const searchAPI = `https://api.themoviedb.org/3/search/movie?query=${movieName}&include_adult=false&language=en-US&page=1`;
+
+  return searchAPI;
+};
