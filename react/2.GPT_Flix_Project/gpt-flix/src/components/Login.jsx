@@ -106,14 +106,14 @@ const Login = () => {
           {/* Background Image Section */}
           <div className="absolute">
             <img
-              className="h-screen w-screen bg-cover"
+              className="h-screen w-screen object-cover"
               src={BG_IMAGE}
               alt="bg-image"
             />
           </div>
 
           {/* Sign-In/Sign-Up Form Section */}
-          <div className="absolute left-0 right-0 mx-auto mt-24 flex w-1/4 rounded-lg bg-black bg-opacity-80">
+          <div className="absolute left-0 right-0 mx-auto mt-[35%] flex w-[60%] rounded-lg bg-black bg-opacity-80 sm:w-[50%] md:mt-32 md:w-[40%] lg:w-1/4">
             <Form onSubmit={(e) => e.preventDefault()} className="p-8">
               <h1 className="mb-4 text-3xl font-bold text-white">
                 {isSignInForm ? "Sign In" : "Sign Up"}
@@ -125,7 +125,7 @@ const Login = () => {
                   ref={name}
                   type="text"
                   placeholder="Full Name"
-                  className="my-2 w-full rounded bg-gray-800 px-2 py-1 text-slate-200"
+                  className="my-2 w-full rounded bg-gray-800 px-2 py-1 text-slate-200 focus:border-[1px] focus:border-green-500 focus:outline-none focus:ring-0"
                   id="fullName"
                 />
               )}
@@ -134,14 +134,14 @@ const Login = () => {
                 ref={email}
                 type="text"
                 placeholder="Email Address"
-                className="my-2 w-full rounded bg-gray-800 px-2 py-1 text-slate-200"
+                className="my-2 w-full rounded bg-gray-800 px-2 py-1 text-slate-200 focus:border-[1px] focus:border-green-500 focus:outline-none focus:ring-0"
                 id="email"
               />
               <input
                 ref={password}
                 type="password"
                 placeholder="Password"
-                className="my-2 w-full rounded bg-gray-800 px-2 py-1 text-slate-200"
+                className="my-2 w-full rounded bg-gray-800 px-2 py-1 text-slate-200 focus:border-[1px] focus:border-green-500 focus:outline-none focus:ring-0"
                 id="password"
               />
 

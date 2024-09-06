@@ -6,9 +6,9 @@ const SecondaryContainer = () => {
 
   return (
     movies && (
-      <div className="bg-black">
-        {/* Only -mt-24 this child container not full secondary container */}
-        <div className="relative z-20 -mt-24">
+      <div className="bg-black pt-4 md:pt-0">
+        {/* Only -mt-32 this child container not full secondary container */}
+        <div className="relative z-20 md:-mt-20 lg:-mt-32">
           <MovieList
             title={"Now Playing Movies"}
             movies={movies?.nowPlayingMovies}

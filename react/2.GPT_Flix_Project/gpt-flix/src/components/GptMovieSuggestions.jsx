@@ -8,7 +8,7 @@ const GptMovieSuggestions = () => {
 
   return (
     <>
-      <div className="mx-3 mt-6 bg-black bg-opacity-75 px-2 py-5 text-white">
+      <div className="mx-2 mt-6 bg-black bg-opacity-75 px-2 py-5 text-white md:mx-3">
         <div>
           {movieNames.map((movieName, index) => (
             <MovieList

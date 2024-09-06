@@ -71,13 +71,13 @@ const Header = () => {
 
   return (
     <>
-      <div className="absolute z-10 flex w-screen items-center justify-between bg-gradient-to-b from-black px-4 py-2">
+      <div className="absolute z-10 flex w-screen flex-col items-center justify-between bg-gradient-to-b from-black px-4 py-2 md:flex-row">
         {/* Right Side */}
         <img className="w-44" src={LOGO} alt="logo" />
 
         {/* Left Side only show when user is logged-in*/}
         {user && (
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 pt-4 text-sm md:pt-0 md:text-lg">
             {/* User language preference only show when showGptSearch is true */}
             {showGptSearch && (
               <select
@@ -102,7 +102,7 @@ const Header = () => {
             <img
               src={user?.photoURL}
               alt="usericon"
-              className="h-8 w-8 rounded-full"
+              className="h-8 w-8 rounded-full md:h-9 md:w-9"
             />
             <button
               onClick={handleSignOut}
