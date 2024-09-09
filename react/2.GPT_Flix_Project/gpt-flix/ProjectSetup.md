@@ -110,13 +110,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAuHdP0OY-5ALDbkKDzZAcT31TvIFVUA5c",
-  authDomain: "gptflix-a47a4.firebaseapp.com",
-  projectId: "gptflix-a47a4",
-  storageBucket: "gptflix-a47a4.appspot.com",
-  messagingSenderId: "135059636328",
-  appId: "1:135059636328:web:fcd7792baa5a85d5aebbdd",
-  measurementId: "G-MHL3HJGT9V"
+ <!-- From .env file -->
 };
 
 // Initialize Firebase
@@ -165,7 +159,6 @@ npm install -g firebase-tools
 
 ### It must be remembered that before you deploy your project, you have to build your project with this command: npm run build.
 
-- Project Console: https://console.firebase.google.com/project/gptflix-a47a4/overview
 - Hosting URL: https://gptflix-a47a4.web.app
 
 # Redux Setup
@@ -254,10 +247,4 @@ import.meta.env.VITE_GEMINI_AI_KEY,
 - GPT Search Page
 - Multi-language feature in our app
 - Create movie suggestion option by using the GeminiAI API and the TMDB API
-
-## Problem
-
-- In the VideoBackground component, the Youtube video border hasn't been removed.
-
-?autoplay=1&mute=1
-allowFullScreen
+- Create Movie Details page

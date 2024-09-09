@@ -1,8 +1,10 @@
 # **_GptFlix_**
 
+- #### [Live Project Link](https://gptflix-a47a4.web.app)
+
 ### Author
 
-- [Anik](https://github.com/Mr-Anik1)
+- #### [Anik](https://t.me/anik2002)
 
 **Project Title:**
 

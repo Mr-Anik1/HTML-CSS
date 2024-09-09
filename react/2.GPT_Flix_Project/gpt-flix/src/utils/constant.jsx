@@ -57,3 +57,7 @@ export const SEARCH_MOVIE_API = (movieName) => {
 
   return searchAPI;
 };
+
+export const MOVIE_DETAILS_API_BY_ID = (movieId) => {
+  return `https://api.themoviedb.org/3/movie/${movieId}`;
+};

@@ -6,7 +6,7 @@ const MovieCard = ({ movie }) => {
 
   return (
     <>
-      <div className="relative w-36 overflow-hidden rounded-lg bg-white shadow-lg transition duration-300 hover:scale-105 hover:shadow-sky-300 md:w-48">
+      <div className="relative h-full w-36 overflow-hidden rounded-lg bg-white shadow-lg transition duration-300 hover:scale-105 hover:shadow-sky-300 md:w-48">
         <img
           className="h-28 w-full md:h-36"
           src={TMDB_IMG_URL + movie.poster_path}
